@@ -1,0 +1,22 @@
+@mixin media($checkpoint) {
+  @if $checkpoint == "mobile" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $checkpoint == "small" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $checkpoint == "medium" {
+    @media (min-width: 991px) {
+      @content;
+    }
+  }
+  @if $checkpoint == "large" {
+    @media (min-width: 1199px) {
+      @content;
+    }
+  }
+}

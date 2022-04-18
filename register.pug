@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Resgister
+    include pug/stylelink
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    div(class="contact") 
+      .container
+        nav(class="my-4")
+          ol(class="breadcrumb")
+            li(class="breadcrumb-item  ")
+              a(href="index.html",class="text-dark text-decoration-none") HOME
+            li(class="breadcrumb-item active")
+              a(href="sign.html",class="text-dark") REGISTER
+        div(class="text-start py-3")
+          .row
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label" , for="email") Email Adress
+                input(type="email",id="email",class="form-control" required)
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label" , for="pass") Password
+                input(type="password",id="pass",class="form-control" required)
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label" , for="confirmPassword") Confirm Password
+                input(type="password",id="confirmPassword",class="form-control" required)
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label" , for="name") Name
+                input(type="text",id="name",class="form-control" required)
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label" , for="company") Company Name
+                input(type="text",id="company",class="form-control" required)
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label" , for="phone") Phone Number
+                input(type="text",id="phone",class="form-control" required)
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label" , for="address1") Address Line 1
+                input(type="text",id="address1",class="form-control" required)
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label" , for="address2") Address Line 2
+                input(type="text",id="address2",class="form-control")                                    
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label" , for="city") Suburb/City
+                input(type="text",id="city",class="form-control" required)
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label d-block" , for="contry") Country
+                include pug/layout/countrylist.pug
+            .col-md-6
+              div(class="sign-input mb-2 mb-md-3")
+                label(class="form-label d-block" , for="zipCode") Zip/Postcode
+                input(type="text",class="form-control",id="zipCode",required)
+          button(class="btn btn-dark px-4 py-2",onclick="registerBtn()",type="button",style="width:fit-content") Create Account
+    include pug/layout/footer.pug
+    include pug/scripts.pug
+    script(src="js/register.js")

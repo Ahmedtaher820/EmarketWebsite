@@ -1,0 +1,123 @@
+mixin categories(icon , text , status,listitem)
+  li(class="d-flex align-items-center mb-2 secondcolor fw-normal position-relative")
+    i(class="me-2 " + icon)
+    p(class="mb-0") #{text}
+    case status
+      when true
+        .list
+          i(class="fa-solid fa-chevron-right")
+          case listitem
+            when "Accessories"
+              div(class="position-absolute accesslist py-3 top-0 shadow ps-5 bg-light")
+                .container
+                  .row
+                    +list([
+                      {
+                        head:"BABYS CLOTHINGS",
+                        list:["Basg & Shop","Shoes","Short","Sports Light","watch kids"]
+                      },
+                      {
+                        head:"BABYS CLOTHINGS",
+                        list:["Basg & Shop","Shoes","Short","Sports Light","watch kids"]
+                      },
+                      {
+                        head:"BABYS CLOTHINGS",
+                        list:["Basg & Shop","Shoes","Short","Sports Light","watch kids"]
+                      },
+                      {
+                        head:"BABYS CLOTHINGS",
+                        list:["Basg & Shop","Shoes","Short","Sports Light","watch kids"]
+                      },
+                      {
+                        head:"BABYS CLOTHINGS",
+                        list:["Basg & Shop","Shoes","Short","Sports Light","watch kids"]
+                      },
+                      {
+                        head:"BABYS CLOTHINGS",
+                        list:["Basg & Shop","Shoes","Short","Sports Light","watch kids"]
+                      },
+                      {
+                        head:"BABYS CLOTHINGS",
+                        list:["Basg & Shop","Shoes","Short","Sports Light","watch kids"]
+                      },
+                    ])
+      when false
+        i(class="")  
+//- mixin for product
+mixin product(products)
+  each product in products
+    div(class="product d-flex flex-column gap-2 mt-4 pb-4 px-3 pointer")
+      img(src=product.src ,class="product-img",alt="")
+      span(class="content") #{product.content}
+      ul(class="list-unstyled star-list")
+        li(class="d-inline-block") 
+          i(class=product.icon)
+        li(class="d-inline-block") 
+          i(class=product.icon)
+        li(class="d-inline-block") 
+          i(class=product.icon)
+        li(class="d-inline-block") 
+          i(class=product.icon)
+        li(class="d-inline-block") 
+          i(class=product.icon)
+      .price-box 
+        span(class="price") #{product.price}
+        case product.currsale
+          when true
+            span(class="sale line-through") #{product.sale}
+          when false
+            span
+    button(class="btn border mx-auto",type="button",style="width:fit-content",onclick="openproduct(event)") Read More                
+//- mixin for selling section
+mixin selling(allproducts)
+  each prod in allproducts
+    div(class="prod d-flex gap-3 mt-3")
+      img(src=prod.src ,alt="",class="prod-img")
+      div(class="box-content d-flex flex-column gap-1")
+        p(class="mb-0") #{prod.content}
+        ul(class="list-unstyled star-list")
+          li 
+            i(class="fa-solid fa-star")
+          li 
+            i(class="fa-solid fa-star")
+          li 
+            i(class="fa-solid fa-star")
+          li 
+            i(class="fa-solid fa-star")
+          li 
+            i(class="fa-solid fa-star")
+        div(class="price-sec")    
+          span(class="fw-bold maincolor") #{prod.price}
+          case prod.pricestate
+            when true
+              span(class="prod-sale line-through d-inline-block ms-2") #{prod.sala}
+            when false
+              span  
+mixin productlistdisplay(products)
+  each product in products
+    div(class="productlist  align-items-center gap-4 mt-4 pb-4 px-3")
+      div(class="prod-img p-2")
+        img(src=product.src ,class="product-img",alt="")
+      div(class="prod-content text-start d-flex flex-column gap-2")  
+        span #{ product.content}
+        ul(class="list-unstyled star-list")
+          li(class="d-inline-block") 
+            i(class=product.icon)
+          li(class="d-inline-block") 
+            i(class=product.icon)
+          li(class="d-inline-block") 
+            i(class=product.icon)
+          li(class="d-inline-block") 
+            i(class=product.icon)
+          li(class="d-inline-block") 
+            i(class=product.icon)
+        .price-box    
+          span(class="price") #{product.price}
+          case product.currsale
+            when true
+              span(class="sale line-through") #{product.sale}
+            when false
+              span 
+        div(class="discription")
+          span Nam tempus turpis at metus scelerisque placerat nulla deumantos sollicitudin felis. Pellentesque diam dolor, elementum et lobortis at, mollis ut risus. Sedcus faucibus cosmo sullamcorper mattis fusce molestie elit a lorem tempus scelerisque blandit est...
+          

@@ -1,0 +1,20 @@
+include pug/mixins/mixin.pug
+include pug/mixins/list.pug
+include pug/mixins/catelist.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Shop
+    include pug/stylelink
+    block stylefile
+        link(rel="stylesheet" , href="css/aboutpage.css")
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    include pug/pages/contentshop.pug
+    include pug/layout/footer.pug
+    include pug/scripts.pug  

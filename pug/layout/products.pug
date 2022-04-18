@@ -1,0 +1,56 @@
+div(class="ps-3 shop-product mt-4 mt-md-0")
+  div(class="prod-option d-flex justify-content-between align-items-center")
+    div(class="option-one d-md-flex align-items-center d-none")
+      h6(class="fs-6 me-3 mb-0") VIEW AS: 
+      ul(class="list-unstyled")
+        li(class="active",onclick="viewAs(event)") 2
+        li(onclick="viewAs(event)") 3
+        li(onclick="viewAs(event)") 4
+        li(onclick="viewAs(event)") 
+          i(class="fa-solid fa-bars")
+    div(class="option-two d-flex align-items-center")
+      h6(class="fs-6 mb-0 me-2") SORT BY: 
+      select(class="pointer")
+        option Featured items
+        option(selected) Newest Items
+        option Best Selling
+        option A to Z
+        option Z to A
+  div(class="prod-content mt-4")
+    .row
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/jacketbox.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/t-shirt 2.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/t-shirt3.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/bagprod.webp",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/t-shirtprod.webp",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])   
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/bagprod2.webp",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])      
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/soundprod.webp",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/mobprod.webp",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/mobprod2.webp",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/cameraprod.webp",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/headprod.webp",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}])
+      div(class="col-md-6")
+        div(class="pro-box d-flex flex-column gap-3 text-center mb-4")
+          +product([{src:"../../assets/mobprod3.webp",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:true}]) 

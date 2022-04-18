@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Services
+    include pug/stylelink.pug
+
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    div(class="services")
+      div(class="container px-0")
+        nav(class="my-4")
+          ol(class="breadcrumb")
+            li(class="breadcrumb-item  ")
+              a(href="index.html",class="text-dark text-decoration-none") HOME
+            li(class="breadcrumb-item ")
+              a(href="#",class="text-dark") BOUNS PAGE
+            li(class="breadcrumb-item active")
+              a(href="gallery.html",class="text-dark") SERVICES
+        div(class="service-box pt-4 pb-4 border-bottom")      
+          div(class="serv-head d-flex align-items-center") 
+            span(class="serv-num") 1
+            h5(class="fs-5 mb-0 ms-3") What products are warranted?
+          p(class="mt-4 ") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          ul(class="mt-4")
+            li(class="mb-2") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            li(class="mb-2") Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            li(class="mb-2") Ut enim ad minim veniam, quis nostrud exercitation.
+            li(class="mb-2") Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        div(class="service-box pt-4 pb-4 border-bottom")      
+          div(class="serv-head d-flex align-items-center") 
+            span(class="serv-num") 2
+            h5(class="fs-5 mb-0 ms-3") Where to go for warranty service?
+          p(class="mt-4 ") Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        div(class="service-box pt-4 pb-4 border-bottom")      
+          div(class="serv-head d-flex align-items-center") 
+            span(class="serv-num") 3
+            h5(class="fs-5 mb-0 ms-3") I can exchange or return an item?
+          p(class="mt-4 ") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          h4(class="fs-4 mt-3") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          span - Someone famous in Source Title
+          p(class="mt-4") Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        div(class="service-box pt-4 pb-4")      
+          div(class="serv-head d-flex align-items-center") 
+            span(class="serv-num") 4
+            h5(class="fs-5 mb-0 ms-3") In some cases, the warranty is not provided?
+          p(class="mt-4 ") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          ul(class="mt-4")
+            li(class="mb-2") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            li(class="mb-2") Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            li(class="mb-2") Ut enim ad minim veniam, quis nostrud exercitation.
+            li(class="mb-2") Ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+    include pug/layout/footer.pug
+    include pug/scripts.pug  

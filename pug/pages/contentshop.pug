@@ -1,0 +1,18 @@
+div(class="about") 
+  .container
+    nav(class="mt-4")
+      ol(class="breadcrumb")
+        li(class="breadcrumb-item active ")
+          a(href="index.html",class="text-dark text-decoration-none") HOME
+        li(class="breadcrumb-item ")
+          a(href="shop.html",class="text-dark") SHOP
+    a(class="sidebar border px-3 py-1 pointer mb-3 d-block d-lg-none text-decoration-none",data-bs-toggle="offcanvas",data-bs-target="#offcanvasExample",aria-controls="offcanvasExample")
+      i(class="fa-solid fa-bars me-3 text-secondary ")
+      span(class="text-secondary") SIDEBAR      
+    .row
+      div(class="col-md-3 d-none d-lg-block")
+        include ../layout/categories.pug
+        include ../layout/customblock.pug
+      .col-md-9
+        include ../layout/products.pug
+    include ../layout/catemodel.pug    

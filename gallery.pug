@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Gallery
+    include pug/stylelink.pug
+
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    div(class="gallery") 
+    .container
+      nav(class="my-4")
+        ol(class="breadcrumb")
+          li(class="breadcrumb-item  ")
+            a(href="index.html",class="text-dark text-decoration-none") HOME
+          li(class="breadcrumb-item ")
+            a(href="#",class="text-dark") BOUNS PAGE
+          li(class="breadcrumb-item active")
+            a(href="gallery.html",class="text-dark") PHOTO GALLERY
+      div(id="gallery")      
+        .row
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10012.jpg",alt="",class="img-fluid")
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10013.jpg" ,alt="",class="img-fluid")
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10014.jpg" ,alt="",class="img-fluid")
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10015.jpg" ,alt="",class="img-fluid")
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10016.jpg" ,alt="",class="img-fluid")
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10017.jpg" ,alt="",class="img-fluid")
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10018.jpg" ,alt="",class="img-fluid")
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10019.jpg" ,alt="",class="img-fluid")            
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10020.jpg" ,alt="",class="img-fluid")
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10021.jpg" ,alt="",class="img-fluid")
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10017.jpg" ,alt="",class="img-fluid")
+          .col-md-3
+            .gall-img(class="mb-3 mb-md-3")
+              img(src="../../assets/gallery/10013.jpg" ,alt="",class="img-fluid")    
+
+    include pug/layout/footer.pug
+    include pug/scripts.pug  

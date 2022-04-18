@@ -1,0 +1,493 @@
+div(class="slider my-4 ")
+  div(class="container py-3 px-4 border rounded-3")
+    .row
+      .col-md-3
+        div(class="categories ")
+          div(class="cat-heading d-flex align-items-center mb-3")
+            i(class="fa-solid fa-gem me-2")
+            h3(class="fs-5 mb-0") ALL CATEGORIES
+          .car-list
+            ul(class="list-unstyled")
+              +categories("fa-solid fa-robot" , "Accessories" , true,"Accessories")
+              +categories("fa-solid fa-computer" , "Computer" , true)
+              +categories("fa-solid fa-utensils" , "Maternity" , false)
+              +categories("fa-solid fa-mobile" , "Smartphone" , false)
+              +categories("fa-solid fa-stopwatch" , "Jewelry & Watches" , true)
+              +categories("fa-solid fa-shirt" , "Sport Clothing" , false)
+              +categories("fa-solid fa-gift" , "Gifts,Sport,Toys" , false)
+              +categories("fa-solid fa-chair" , "Home & Furniture" , false)
+              +categories("fa-solid fa-kitchen-set" , "Kitchen" , false)
+              +categories("fa-solid fa-circle-plus" , "Moe Categories" , false)
+      .col-md-9
+        .slider-slide
+          div(class="owl-carousel owl-theme header-carousel")
+            div(class="item slide1")
+              img(src="../../assets/slide1.jpg",alt="")
+            div(class="item slide2")
+              img(src="../../assets/slide2.jpg",alt="") 
+            div(class="item slide3")
+              img(src="../../assets/slide3.jpg",alt="") 
+//- start of details section
+div(class="details my-5 d-none d-md-block")
+  div(class="container py-3 border ")
+    .row
+      div(class="col-lg-3 col-md-6  mb-3 mb-md-0")
+        div(class="detail-box d-flex gap-3 align-items-center px-1 border-end")
+          i(class="fa-solid fa-file fs-3 maintext maincolor")
+          .box-content
+            p(class="fw-bold mb-0 pointer") FREE DELIVERY
+            span On order over $49.86
+      div(class="col-lg-3 col-md-6  mb-3 mb-md-0")
+        div(class="detail-box d-flex gap-3 align-items-center px-1 border-end")
+          i(class="fa-solid fa-hands-holding-circle fs-3 maintext maincolor")
+          .box-content
+            p(class="fw-bold mb-0 pointer") ORDER PROTECTTION
+            span Secured information
+      div(class="col-lg-3 col-md-6  mb-3 mb-md-0")
+        div(class="detail-box d-flex gap-3 align-items-center px-1 border-end")
+          i(class="fa-solid fa-gift fs-3 maintext maincolor")
+          .box-content
+            p(class="fw-bold mb-0 pointer") PROMOTION GIFT
+            span Special offers!
+      div(class="col-lg-3 col-md-6  mb-3 mb-md-0")
+        div(class="detail-box d-flex gap-3 align-items-center px-1")
+          i(class="fa-solid fa-money-bill-1 fs-3 maintext maincolor")
+          .box-content
+            p(class="fw-bold mb-0 pointer") MONEY BACK
+            span Return over 30 days
+//- start fashion section
+div(class="fashion my-5")
+  .container
+    .row
+      div(class="col-lg-3 d-none d-lg-block")
+        .tags
+          p(class=" pb-2 mb-0") POPULAR TAGS 
+          div(class="tags-box p-3 d-flex flex-wrap border")
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Best
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Ham
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Samsung
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Nami
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Ctiyan
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Pillit
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Hock
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Patheon
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Pleasure
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Donec
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Present
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Cillum
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Denstitute
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Ostana
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") FHD
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Nam
+            span(class="px-2 py-1 rounded-pill mx-2 mb-2 pointer") Turpis
+      .col-lg-9
+        .fashion-box
+          include fashion.pug
+//- start sales
+div(class="iphone my-2 pointer")
+  .container
+    img(src="../../assets/iphone.png" class="img-fluid",alt="")
+//- start deals of weak
+div(class="deals py-4")
+  .container
+    h4(class="fs-5") DEALS OF THE WEEK
+  div(class="container p-3 border")
+    .row
+      .col-md-4
+        div(class="left-side border-end px-3 py-3 shadow",data-product="one")
+          div(class="left-img position-relative")
+            img(class="img-fluid" src="../../assets/box.jpg" alt="")
+            span(class="position-absolute") -40%
+            ul(class="list-unstyled position-absolute top-50")
+              li 
+                i(class="fa-solid fa-cart-arrow-down p-2 rounded-2 pointer")
+              li 
+                i(class="fa-solid fa-heart p-2 rounded-2 pointer",onclick="mywash(event)")
+              li 
+                i(class="fa-solid fa-arrows-rotate p-2 rounded-2 pointer")
+              li 
+                i(class="fa-solid fa-search p-2 rounded-2 pointer")      
+          div(class="left-content d-flex flex-column gap-2 mt-2")
+            a(href="#", class=" text-decoration-none fw-bold") Deonucing Pleasure
+            span(class="fs-4 fw-bold me-1") $150.00 #[span(class="fw-bold") $210]
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit  Sapiente eaque, ullam perspiciatis modi minima dicta optio aliquam dignissimos reiciendis....
+            div(class="d-flex gap-4 offer align-items-center")
+              div(class="offer-content")
+                h5(class="fs-5 mb-1 fw-bold") Hurry Up!
+                span Offer end in:
+              ul(class="list-unstyled")
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small DAY
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small HOUR
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small MIN
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small SEC    
+      .col-md-8
+        div(class="left-side box2 px-3 py-3 d-flex shadow",data-product="two")
+          div(class="left-img position-relative me-3")
+            img(class="img-fluid" src="../../assets/t-shirt 2.jpg" alt="")
+            span(class="position-absolute") -29%
+            ul(class="list-unstyled position-absolute top-50")
+              li 
+                i(class="fa-solid fa-cart-arrow-down p-2 rounded-2 pointer")
+              li 
+                i(class="fa-solid fa-heart p-2 rounded-2 pointer",onclick="mywash(event)")
+              li 
+                i(class="fa-solid fa-arrows-rotate p-2 rounded-2 pointer")
+              li 
+                i(class="fa-solid fa-search p-2 rounded-2 pointer")      
+          div(class="left-content d-flex flex-column gap-2 mt-2")
+            a(href="#", class=" text-decoration-none fw-bold") Chemise linen
+            span(class="fs-4 fw-bold me-1") $350.00 
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit  Sapiente eaque dignissimos reiciendis....
+            div(class="d-flex gap-4 offer align-items-center")
+              div(class="offer-content")
+                h5(class="fs-5 mb-1 fw-bold") Hurry Up!
+                span Offer end in:
+              ul(class="list-unstyled")
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small DAY
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small HOUR
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small MIN
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small SEC  
+        div(class="left-side px-3 py-3 mt-4 d-flex shadow",data-product="three")
+          div(class="left-img position-relative me-3")
+            img(class="img-fluid" src="../../assets/clock.jpg" alt="")
+            img(class="img-fluid position-absolute gift" src="../../assets/gift.png" alt="")
+            ul(class="list-unstyled position-absolute top-50")
+              li 
+                i(class="fa-solid fa-cart-arrow-down p-2 rounded-2 pointer")
+              li 
+                i(class="fa-solid fa-heart p-2 rounded-2 pointer",onclick="mywash(event)")
+              li 
+                i(class="fa-solid fa-arrows-rotate p-2 rounded-2 pointer")
+              li 
+                i(class="fa-solid fa-search p-2 rounded-2 pointer")      
+          div(class="left-content d-flex flex-column gap-2 mt-2")
+            a(href="#", class=" text-decoration-none fw-bold") Oclock Turish
+            span(class="fs-4 fw-bold me-1") $75.00 #[span(class="fw-bold") $90]
+            p Lorem ipsum dolor sit amet consectetur adipisicing  dicta optio aliquam dignissimos reiciendis....
+            div(class="d-flex gap-4 offer align-items-center")
+              div(class="offer-content")
+                h5(class="fs-5 mb-1 fw-bold") Hurry Up!
+                span Offer end in:
+              ul(class="list-unstyled")
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small DAY
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small HOUR
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small MIN
+                li(class="d-inline-block me-2 text-center")
+                  span(class="d-block") 00
+                  small SEC     
+//-  start womansec
+div(class="my-3 py-3 womansec")
+  .container
+    .row
+      .col-md-6
+        a(href="#" class="me-3")
+          img(src="../../assets/shoes.png" class="img-fluid" alt="")
+      .col-md-6
+        a(href="#")
+          img(src="../../assets/cream.png" class="img-fluid" alt="")
+
+//- start parts of products
+div(class="parts mt-4 text-center")
+  .container
+    ul(class="list-unstyled d-flex border")
+      li(class="border-end d-flex flex-column justify-content-center pointer active" data-product="electronic")
+        img(src="../../assets/pro1.png",alt="")
+        span Electronic
+      li(class="border-end d-flex flex-column justify-content-center pointer" data-product="cosmetic")
+        img(src="../../assets/pro2.png",alt="")
+        span Cosmetic
+      li(class="border-end d-flex flex-column justify-content-center pointer" data-product="bags")
+        img(src="../../assets/pro3.png",alt="")
+        span Bags
+      li(class="border-end d-flex flex-column justify-content-center pointer"  data-product="jewelrys")
+        img(src="../../assets/pro4.png",alt="")
+        span Jewelery
+      li(class="border-end d-flex flex-column justify-content-center pointer" data-product="smart")
+        img(src="../../assets/pro5.png",alt="")
+        span Smart Tv
+      li(class="border-end d-flex flex-column justify-content-center pointer" data-product="cellphone")
+        img(src="../../assets/pro6.png",alt="")
+        span Cellphone
+      li(class="d-flex flex-column justify-content-center pointer" data-product="sports")
+        img(src="../../assets/pro7.png",alt="")
+        span Sports 
+    div(class="owl-carousel owl-theme porduct-carousel electronic active")
+      div(class="item") 
+        +product([{src:"../../assets/jacketbox.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/shoes.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/clock2.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/light.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/blackchair.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/sound1.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+
+    div(class="owl-carousel owl-theme porduct-carousel cosmetic noactive")
+      div(class="item") 
+        +product([{src:"../../assets/t-shirt.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/t-shirt2.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/t-shirt3.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/sound1.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/headphone.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/sound1.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+    div(class="owl-carousel owl-theme porduct-carousel bags noactive")
+      div(class="item") 
+        +product([{src:"../../assets/bag2.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/chair.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/chair2.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/chair3.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/light.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/sound1.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+    div(class="owl-carousel owl-theme porduct-carousel jewelrys noactive")
+      div(class="item") 
+        +product([{src:"../../assets/remote.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/mob1.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/mob2.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/mob3.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/headphone.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/sound1.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+    div(class="owl-carousel owl-theme porduct-carousel smart noactive")
+      div(class="item") 
+        +product([{src:"../../assets/jacketbox.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/shoes.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/clock2.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/light.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/blackchair.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/sound1.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+    div(class="owl-carousel owl-theme porduct-carousel cellphone noactive")
+      div(class="item") 
+        +product([{src:"../../assets/jacketbox.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/shoes.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/clock2.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/light.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/blackchair.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/sound1.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+    div(class="owl-carousel owl-theme porduct-carousel sports noactive")
+      div(class="item") 
+        +product([{src:"../../assets/jacketbox.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/shoes.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/clock2.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/light.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00 ",sale:" 654.00",currsale:true}])
+      div(class="item")
+        +product([{src:"../../assets/blackchair.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+      div(class="item")
+        +product([{src:"../../assets/sound1.jpg",content:"this available in this month it's very",icon:"fa-solid fa-star",price:"$550.00",sale:" 654.00",currsale:false}])
+//- watch section
+div(class="watch my-5 pointer")
+  .container
+    img(src="../../assets/watch.png" , class="img-fluid" , alt="")
+
+//- start selling
+div(class="selling my-5")
+  .container
+    .row
+      .col-md-4
+        div(class="selling-box position-relative mb-5 mb-md-0")
+          ul(class="list-unstyled d-flex justify-content-between align-items-center border-bottom")
+            li(class="pb-3")
+              h6(class="mb-0") FEATURED PRODUCTS
+
+          div(class="owl-carousel owl-theme owl-selling-carousel")
+            div(class="item")
+              +selling([{src:"../../assets/t-shirt.jpg",content:"lorem ispum t-shirt free",price:"189$" , sala:"250$",pricestate:true}])
+              +selling([{src:"../../assets/t-shirt2.jpg",content:"lorem ispum t-shirt free",price:"250$" , sala:"310$",pricestate:true}])
+              +selling([{src:"../../assets/t-shirt3.jpg",content:"lorem ispum t-shirt free",price:"320$" , sala:"450$",pricestate:true}])
+              +selling([{src:"../../assets/shoes.jpg",content:"lorem ispum t-shirt free",price:"89$" , sala:"10$",pricestate:true}])
+            div(class="item")
+              +selling([{src:"../../assets/sound1.jpg",content:"lorem ispum t-shirt free",price:"50$" , sala:"80$",pricestate:false}])
+              +selling([{src:"../../assets/headphone.jpg",content:"lorem ispum t-shirt free",price:"70$" , sala:"110$",pricestate:false}])
+              +selling([{src:"../../assets/remote.jpg",content:"lorem ispum t-shirt free",price:"105$" , sala:"125$",pricestate:false}])
+              +selling([{src:"../../assets/camera.jpg",content:"lorem ispum t-shirt free",price:"80$" , sala:"110$",pricestate:false}])  
+      .col-md-4
+        div(class="selling-box position-relative mb-5 mb-md-0")
+          ul(class="list-unstyled d-flex justify-content-between align-items-center border-bottom")
+            li(class="pb-3")
+              h6(class="mb-0") BEST SELLIER
+
+          div(class="owl-carousel owl-theme owl-selling-carousel")
+            div(class="item")
+              +selling([{src:"../../assets/chair.jpg",content:"lorem ispum t-shirt free",price:"189$" , sala:"250$",pricestate:true}])
+              +selling([{src:"../../assets/chair2.jpg",content:"lorem ispum t-shirt free",price:"250$" , sala:"310$",pricestate:true}])
+              +selling([{src:"../../assets/box.jpg",content:"lorem ispum t-shirt free",price:"320$" , sala:"450$",pricestate:true}])
+              +selling([{src:"../../assets/light.jpg",content:"lorem ispum t-shirt free",price:"89$" , sala:"10$",pricestate:true}])
+            div(class="item")
+              +selling([{src:"../../assets/bag.jpg",content:"lorem ispum t-shirt free",price:"50$" , sala:"80$",pricestate:false}])
+              +selling([{src:"../../assets/shoes.jpg",content:"lorem ispum t-shirt free",price:"70$" , sala:"110$",pricestate:false}])
+              +selling([{src:"../../assets/bag2.jpg",content:"lorem ispum t-shirt free",price:"105$" , sala:"125$",pricestate:false}])
+              +selling([{src:"../../assets/camera.jpg",content:"lorem ispum t-shirt free",price:"80$" , sala:"110$",pricestate:false}])  
+      .col-md-4
+        div(class="selling-box position-relative mb-5 mb-md-0")
+          ul(class="list-unstyled d-flex justify-content-between align-items-center border-bottom")
+            li(class="pb-3")
+              h6(class="mb-0") NEWS PRODUCTS
+
+          div(class="owl-carousel owl-theme owl-selling-carousel")
+            div(class="item")
+              +selling([{src:"../../assets/camera.jpg",content:"lorem ispum t-shirt free",price:"189$" , sala:"250$",pricestate:true}])
+              +selling([{src:"../../assets/bag2.jpg",content:"lorem ispum t-shirt free",price:"250$" , sala:"310$",pricestate:true}])
+              +selling([{src:"../../assets/t-shirt3.jpg",content:"lorem ispum t-shirt free",price:"320$" , sala:"450$",pricestate:true}])
+              +selling([{src:"../../assets/chair2.jpg",content:"lorem ispum t-shirt free",price:"89$" , sala:"10$",pricestate:true}])
+            div(class="item")
+              +selling([{src:"../../assets/light.jpg",content:"lorem ispum t-shirt free",price:"50$" , sala:"80$",pricestate:false}])
+              +selling([{src:"../../assets/headphone.jpg",content:"lorem ispum t-shirt free",price:"70$" , sala:"110$",pricestate:false}])
+              +selling([{src:"../../assets/mob1.jpg",content:"lorem ispum t-shirt free",price:"105$" , sala:"125$",pricestate:false}])
+              +selling([{src:"../../assets/mob2.jpg",content:"lorem ispum t-shirt free",price:"80$" , sala:"110$",pricestate:false}])                  
+//- start of price plane
+div(class="price my-5")
+  .container
+    div(class="owl-carousel owl-theme price-carousel border p-4")
+      div(class="item")
+        a(href="#")
+          img(src="../../assets/price1.webp" , alt="" , class="img-fluid")
+      div(class="item")
+        a(href="#")
+          img(src="../../assets/price2.webp" , alt="" , class="img-fluid")
+      div(class="item")
+        a(href="#")
+          img(src="../../assets/price3.webp" , alt="" , class="img-fluid")
+      div(class="item")
+        a(href="#")
+          img(src="../../assets/price4.webp" , alt="" , class="img-fluid")
+      div(class="item")
+        a(href="#")
+          img(src="../../assets/price5.webp" , alt="" , class="img-fluid")                  
+//- lasted blog
+div(class="blog my-5")
+  .container
+    ul(class="list-unstyled border-bottom")
+      li 
+        h5(class="mb-0 pb-3") LASTED BLOG
+    div(class="owl-carousel owl-theme blog-carousel mt-3")
+      div(class="item")
+        div(class="blog-box d-flex flex-column gap-2")
+          .blog-img
+            img(src="../../assets/user1.jpg",class="img-fluid rounded-2" , alt="")
+          h6 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          div(class="member-sec d-flex gap-3")
+            div(class="member")
+              i(class="fa-solid fa-user me-2")
+              span Ahmed taher
+            div(class="date")  
+              i(class="fa-solid fa-clock me-2") 
+              span 4th Mar 2022  
+      div(class="item")
+        div(class="blog-box d-flex flex-column gap-2")
+          .blog-img
+            img(src="../../assets/user2.jpg",class="img-fluid rounded-2" , alt="")
+          h6 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          div(class="member-sec d-flex gap-3")
+            div(class="member")
+              i(class="fa-solid fa-user me-2")
+              span mohamed mahmoud
+            div(class="date")  
+              i(class="fa-solid fa-clock me-2") 
+              span 4th Feb 2020  
+      div(class="item")
+        div(class="blog-box d-flex flex-column gap-2")
+          .blog-img
+            img(src="../../assets/user3.jpg",class="img-fluid rounded-2" , alt="")
+          h6 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          div(class="member-sec d-flex gap-3")
+            div(class="member")
+              i(class="fa-solid fa-user me-2")
+              span abdo alaa
+            div(class="date")  
+              i(class="fa-solid fa-clock me-2") 
+              span 4th July 2020  
+      div(class="item")
+        div(class="blog-box d-flex flex-column gap-2")
+          .blog-img
+            img(src="../../assets/user4.jpg",class="img-fluid rounded-2" , alt="")
+          h6 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  lorem ipsum 
+          div(class="member-sec d-flex gap-3")
+            div(class="member")
+              i(class="fa-solid fa-user me-2")
+              span Ahmed ali
+            div(class="date")  
+              i(class="fa-solid fa-clock")
+              span 4th Oct 2017  
+      div(class="item")
+        div(class="blog-box  d-flex flex-column gap-2")
+          .blog-img
+            img(src="../../assets/user5.jpg",class="img-fluid rounded-2" , alt="")
+          h6 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          div(class="member-sec d-flex gap-3")
+            div(class="member")
+              i(class="fa-solid fa-user me-2")
+              span heba ali
+            div(class="date")  
+              i(class="fa-solid fa-clock me-2") 
+              span 4th Jun 2018
+
+//- start footer nav                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

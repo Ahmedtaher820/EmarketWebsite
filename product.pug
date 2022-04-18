@@ -1,0 +1,97 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Product
+    include pug/stylelink
+    block stylefile
+    //-   link(rel="stylesheet" , href="css/sign.css")
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    div(class="product position-relative") 
+      .container
+        nav(class="my-4")
+          ol(class="breadcrumb")
+            li(class="breadcrumb-item  ")
+              a(href="index.html",class="text-dark text-decoration-none") HOME
+            li(class="breadcrumb-item active")
+              a(href="shop.html",class="text-dark") SHOP
+            li(class="breadcrumb-item active")
+              a(href="product.html",class="text-dark") PRODUCT
+
+        div(class="product-box d-flex justify-content-center my-5 flex-column flex-md-row text-center text-md-start")
+          div(class="product-img")
+            img(src="",alt="",id="product-img",class="img-fluid")
+          div(class="product-content ms-5 d-flex flex-column gap-2")    
+            h3(class="fs-3 mb-0", id="product-heading")
+            div(class="rating d-flex align-items-center gap-2 justify-content-center justify-content-md-start")
+              include pug/layout/star.pug
+              p(class="pointer mb-0",onclick="showRating()",data-bs-toggle="modal" , data-bs-target="#ratingModa") Write a Review
+            div(class="maincolor d-flex gap-3 align-items-center justify-content-center justify-content-md-start")
+              h5(class="fs-4",id="price")
+              small(class="line-through text-muted",id="sale")
+            h6(class="fs-6 pointer mb-0 pb-2",onclick="sizechat()") 
+              i(class="fa-solid fa-image me-1")
+              |Size Chart
+            div(class="pt-2 border-top")
+              h6(class="d-block mb-2") Qunatity
+              input(type="number",value="1",min="1",class="form-control mx-auto mx-md-0",style="width:fit-content")
+            div(class="btn-gropup")
+              button(class="btn bg-main px-3 my-2 text-light me-2",type="button",style="width:fit-content") Add to Cart  
+              button(class="btn bg-light border px-5 my-2",type="button",style="width:fit-content") Add to Wish List 
+            ul(class="list-unstyled social-product mt-2")
+              li(class="d-inline-block")
+                i(class="fa-brands fa-facebook")
+              li(class="d-inline-block")
+                i(class="fa-brands fa-twitter")
+              li(class="d-inline-block")
+                i(class="fa-brands fa-instagram")
+              li(class="d-inline-block")
+                i(class="fa-brands fa-whatsapp")
+    div(class="size-chart position-absolute top-0 top-0 d-flex justify-content-center w-100 h-100 align-items-center")
+      img(src="assets/size-chart.jpg")
+      i(class="fa-solid fa-xmark fs-5 pointer",onclick="closeImgChart()")
+    div(class="modal fade " , id="ratingModa")
+      div(class="modal-dialog modal-dialog-scrollable modal-lg")
+        div(class="modal-content")
+          div(class="modal-content")
+            div(class="modal-header")
+              h5(class="modal-title",id="ratingModa") Write a Review
+              button(class="btn btn-close",data-bs-dismiss="modal")
+            div(class="modal-body")
+              .container-fluid   
+                .row
+                  .col-md-6
+                    div(class="rating-img d-flex justify-content-center flex-column align-items-center gap-2")
+                      img(class="img-fluid mx-auto",alt="",id="rating-img")
+                      h5(class="fs-5",id="rating-text")
+                  .col-md-6
+                    form
+                      div(class="inputs-group")
+                        label(class="form-label",for="rating") Rating
+                        select(class="form-control",id="chooseRating",required)
+                          option(value="1 start (worest)") 1 start (worest)
+                          option(value="2 start ") 2 start 
+                          option(value="3 start (worest)") 3 start (average)
+                          option(value="4 start (worest)") 4 start
+                          option(value="5 start (worest)") 5 start (best)
+                      div(class="inputs-group")    
+                        label(class="form-label",for="name") Name
+                        input(class="form-control",id="name",type="text")
+                      div(class="inputs-group")    
+                        label(class="form-label",for="email") Email
+                        input(class="form-control",id="email",type="email")
+                      div(class="inputs-group")    
+                        label(class="form-label",for="review") Review Subject
+                        input(class="form-control",id="review",type="text",required)
+                      div(class="textarea-box")    
+                        label(for="message",class="d-block") Comments
+                        textarea(class="w-100" rows="4",id="message",required)
+                      button(class="btn btn-dark mt-2") Submit Review 
+    include pug/layout/footer.pug
+    include pug/scripts.pug
+    script(src="js/productpage.js")

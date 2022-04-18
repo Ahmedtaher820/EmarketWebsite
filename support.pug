@@ -1,0 +1,62 @@
+include pug/mixins/mixin.pug
+include pug/mixins/list.pug
+include pug/mixins/catelist.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Support
+    include pug/stylelink
+    block stylefile
+      link(rel="stylesheet" , href="css/support.css")
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    div(class="support") 
+      .container
+        nav(class="my-4")
+          ol(class="breadcrumb")
+            li(class="breadcrumb-item  ")
+              a(href="index.html",class="text-dark text-decoration-none") HOME
+            li(class="breadcrumb-item ")
+              a(href="#",class="text-dark") BOUNS PAGE
+            li(class="breadcrumb-item active")
+              a(href="support.html",class="text-dark") SUPPORT
+        div(class="sup-box mt-5")      
+          h2(class="fs-2 mb-b position-relative mx-auto") HAVE A QUESTION?
+          p(class="text-center mt-5 mb-3") Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          div(class="sub-content mt-5")
+            .row
+              .col-md-6
+                div(class="sup-way-one d-flex gap-4 py-5 px-3 pointer mb-3 align-items-center text-light bg-main ")
+                  i(class="fa-solid fa-calendar-plus")
+                  div(class="mt-2")
+                    h4(class="fs-4") KNOWLEDGE BASE
+                    p(class="mb-0") Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcol.
+                  i(class="fa-solid fa-arrow-right fs-1") 
+              .col-md-6
+                div(class="sup-way-one d-flex gap-4 py-5 px-3 pointer mb-3 align-items-center text-light bg-main ")
+                  i(class="fa-solid fa-question")
+                  div(class="mt-2")
+                    h4(class="fs-4") KNOWLEDGE BASE
+                    p(class="mb-0") Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcol.
+                  i(class="fa-solid fa-arrow-right fs-1") 
+              .col-md-6
+                div(class="sup-way-one d-flex gap-4 py-5 px-3 pointer mb-3 mb-md-0 align-items-center text-light bg-main ")
+                  i(class="fa-solid fa-folder-open")
+                  div(class="mt-2")
+                    h4(class="fs-4") KNOWLEDGE BASE
+                    p(class="mb-0") Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcol.
+                  i(class="fa-solid fa-arrow-right fs-1") 
+              .col-md-6
+                div(class="sup-way-one d-flex gap-4 py-5 px-3 pointer mb-3 mb-md-0 align-items-center text-light bg-main ")
+                  i(class="fa-solid fa-wrench")
+                  div(class="mt-2")
+                    h4(class="fs-4") KNOWLEDGE BASE
+                    p(class="mb-0") Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcol.
+                  i(class="fa-solid fa-arrow-right fs-1")              
+    include pug/layout/footer.pug
+    include pug/scripts.pug  

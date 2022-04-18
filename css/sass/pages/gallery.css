@@ -1,0 +1,10 @@
+
+#animated-thumbnails a{
+    width:250px ;
+    height: 250px !important;
+}
+#animated-thumbnails img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

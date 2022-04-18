@@ -1,0 +1,8 @@
+mixin list(items)
+  each item in items 
+    .col-md-3
+      .access-box(class="text-start")
+        p(class="mb-0 pb-2 border-bottom text-dark") #{item.head}
+        ul(class="list-unstyled mt-2 mb-4")
+          each val in item.list
+            li(class="mb-1") #{val}

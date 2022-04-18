@@ -1,0 +1,108 @@
+include pug/mixins/mixin.pug
+include pug/mixins/list.pug
+include pug/mixins/catelist.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Faqs
+    include pug/stylelink
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    div(class="faqs") 
+      .container
+        nav(class="my-4")
+          ol(class="breadcrumb")
+            li(class="breadcrumb-item  ")
+              a(href="index.html",class="text-dark text-decoration-none") HOME
+            li(class="breadcrumb-item ")
+              a(href="#",class="text-dark") BOUNS PAGE
+            li(class="breadcrumb-item active")
+              a(href="faqs.html",class="text-dark") FAQS
+        div(class="faq mt-5")
+          div(class="faq-one")
+            h4(class="fs-4") Delivery
+            div(class="accordion" id="parent")
+              div(class="accordion-item")
+                div(class='acorrdion-header' , id="headone")
+                  button(class="accordion-button text-dark" data-bs-toggle="collapse" data-bs-target="#itemone")
+                    i(class="fa-solid fa-users")
+                    span(class="ms-3") Sed Do Eiusmod Tempor Incididunt
+                div(id="itemone" class="accordion-collapse collapse show" ,data-bs-parent="#parent")    
+                  div(class="accordion-body p-3")
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              div(class="accordion-item")         
+                div(class="accordion-header",id="headtwo")
+                  button(class="accordion-button text-dark" data-bs-toggle="collapse",data-bs-target="#itemtwo")
+                    i(class="fa-solid fa-briefcase")
+                    span(class="ms-3") Lorem Ipsum Dolor Sit Amet Elit?
+                div(id="itemtwo",class="collpase accordion-collapse",data-bs-parent="#parent")        
+                  div(class="accordion-body p-3")
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    ul(class="mt-4 ms-4")
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      li Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      li Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+              div(class="accordion-item")         
+                div(class="accordion-header",id="headthree")
+                  button(class="accordion-button text-dark" data-bs-toggle="collapse",data-bs-target="#itemthree")
+                    i(class="fa-solid fa-image")
+                    span(class="ms-3") Ut Enim Ad Minim Veniam
+                div(id="itemthree",class="collpase accordion-collapse",data-bs-parent="#parent")        
+                  div(class="accordion-body p-3")
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    p(mt-2) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          div(class="faq-two my-5")
+            h4(class="fs-4") Warranty
+            div(class="accordion" id="parentwo")
+              div(class="accordion-item")
+                div(class='acorrdion-header' , id="headfour")
+                  button(class="accordion-button text-dark" data-bs-toggle="collapse" data-bs-target="#itemfour")
+                    span(class="ms-3") Lorem Ipsum Dolor Sit Amet
+                div(id="itemfour" class="accordion-collapse collapse show" ,data-bs-parent="#parenttwo")    
+                  div(class="accordion-body p-3")
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    ul(class="mt-4 ms-4")
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      li Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      li Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+              div(class="accordion-item")         
+                div(class="accordion-header",id="headfive")
+                  button(class="accordion-button text-dark" data-bs-toggle="collapse",data-bs-target="#itemfive")
+                    span(class="ms-3") Ut Enim Ad Minim Veniam
+                div(id="itemfive",class="collpase accordion-collapse",data-bs-parent="#parentwo")        
+                  div(class="accordion-body p-3")
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              div(class="accordion-item")         
+                div(class="accordion-header",id="headsix")
+                  button(class="accordion-button text-dark" data-bs-toggle="collapse",data-bs-target="#itemsix")
+                    span(class="ms-3") Quis Nostrud Exercitation
+                div(id="itemsix",class="collpase accordion-collapse",data-bs-parent="#parentwo")        
+                  div(class="accordion-body p-3")
+                    p(class="mt-2") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.   
+          div(class="faq-three")
+            h4(class="fs-4") Payment
+            div(class="accordion" id="parentthree")
+              div(class="accordion-item")
+                div(class='acorrdion-header' , id="headfour")
+                  button(class="accordion-button text-dark" data-bs-toggle="collapse" data-bs-target="#itemseven")
+                    span(class="ms-3") Sed Do Eiusmod Tempor Incididunt
+                div(id="itemseven" class="accordion-collapse collapse show" ,data-bs-parent="#parentthree")    
+                  div(class="accordion-body p-3")
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              div(class="accordion-item")         
+                div(class="accordion-header",id="headfive")
+                  button(class="accordion-button text-dark" data-bs-toggle="collapse",data-bs-target="#itemeight")
+                    span(class="ms-3") Consectetur Adipiscing Elit
+                div(id="itemeight",class="collpase accordion-collapse",data-bs-parent="#parentthree")        
+                  div(class="accordion-body p-3")
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    include pug/layout/footer.pug
+    include pug/scripts.pug  

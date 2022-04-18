@@ -1,0 +1,28 @@
+header {
+  background-color: $maincolor;
+  nav {
+      padding: 0px !important;
+      .navbar-toggler:focus{
+          box-shadow: none;
+      }
+    li {
+      a {
+        color: #fff !important;
+        font-weight: 600;
+        margin-right: 25px;
+      }
+    }
+    .dropdown-item {
+      color: $secondcolor !important;
+      transition: 0.3s;
+      &:hover {
+        color: #fff !important;
+        background-color: $maincolor !important;
+      }
+    }
+    .cart {
+        background-color: #cc7800;
+      margin-left: auto;
+    }
+  }
+}

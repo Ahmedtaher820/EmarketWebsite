@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Profile
+    include pug/stylelink
+    block stylefile
+      link(rel="stylesheet" , href="css/profile.css")
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    div(class="profile") 
+      .container
+        nav(class="my-4")
+          ol(class="breadcrumb")
+            li(class="breadcrumb-item  ")
+              a(href="index.html",class="text-dark text-decoration-none") HOME
+            li(class="breadcrumb-item active")
+              a(href="profile.html",class="text-dark") PROFILE
+        div(class="account mt-4")
+          h3(class="Account Setting")
+          ul(class="list-unstyled",style={
+            "width":"fit-content"
+          })
+            li(onclick="changeAccountSetting(event)",class="py-2 px-2 pointer border-end d-inline-block" , data-profile="order") OREDERS
+            li(onclick="changeAccountSetting(event)",class="py-2 px-2 pointer border-end d-inline-block" , data-profile="message") MESSAGES
+            li(onclick="changeAccountSetting(event)",class="py-2 px-2 pointer border-end d-inline-block" , data-profile="address") ADDRESS
+            li(onclick="changeAccountSetting(event)",class="py-2 px-2 pointer border-end d-inline-block" , data-profile="wish") WISH LIST
+            li(onclick="changeAccountSetting(event)",class="py-2 px-2 pointer d-inline-block active" , data-profile="accountedit") ACCOUNT SETTING
+          div(class="account-box order noactive my-5")
+            div(class=" d-flex text-light shadow align-items-center")
+              div(class="info px-3 py-3")
+                i(class="fa-solid fa-circle-info fs-3")
+              p(class="mb-0") You haven't placed any orders with us. When you do, their status will appear on this page.
+          div(class="account-box message noactive my-5")
+            div(class=" d-flex text-light shadow align-items-center")
+              div(class="info px-3 py-3")
+                i(class="fa-solid fa-circle-info fs-3")
+              p(class="mb-0") You haven't any message with us. When you do, their status will appear on this page.
+          div(class="account-box wish noactive my-5")
+            div(class=" d-flex text-light shadow align-items-center")
+              div(class="info px-3 py-3")
+                i(class="fa-solid fa-circle-info fs-3")
+              p(class="mb-0") You haven't any message with us. When you do, their status will appear on this page.
+          div(class="account-box accountedit active my-5")
+            .row
+              .col-md-6
+                div(class="form-input mb-2 mb-md-3")
+                  label(class="label-form",for="fname") First Name
+                  input(class="form-control",id="fname",type="text")
+              .col-md-6
+                div(class="form-input mb-2 mb-md-3")
+                  label(class="label-form",for="lame") Last Name
+                  input(class="form-control",id="lame",type="text")
+              .col-md-6
+                div(class="form-input mb-2 mb-md-3")
+                  label(class="label-form",for="company") Company
+                  input(class="form-control",id="company",type="text")
+              .col-md-6
+                div(class="form-input mb-2 mb-md-3")
+                  label(class="label-form",for="phone") Phone Number
+                  input(class="form-control",id="phone",type="text")    
+              .col-md-6
+                div(class="form-input mb-2 mb-md-3")
+                  label(class="label-form",for="email") Email Address
+                  input(class="form-control",id="email",type="email")
+              .col-md-6
+                div(class="form-input mb-2 mb-md-3")
+                  label(class="label-form",for="pass") Password
+                  input(class="form-control",id="pass",type="password")
+              .col-md-6
+                div(class="form-input mb-2 mb-md-3")
+                  label(class="label-form",for="confpass") Confirm Password
+                  input(class="form-control",id="confpass",type="password") 
+              .col-md-6
+                div(class="form-input mb-2 mb-md-3")
+                  label(class="label-form",for="currpass") Current Password
+                  input(class="form-control",id="currpass",type="password")
+            button(class="btn btn-dark py-2 px-4 mx-auto my-4",type="button") Update Details        
+    include pug/layout/footer.pug
+    include pug/scripts.pug  

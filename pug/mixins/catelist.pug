@@ -1,0 +1,6 @@
+mixin catelistinside(itemsInside)
+  each itemInside in itemsInside
+    li(class="pb-2 list position-relative ")
+      div(class="list-content d-flex align-items-center ps-2")
+        i(class="fa-solid fa-circle-dot me-2 ")
+        span= itemInside.head

@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+// bootstrap override
+.form-control:focus {
+  border: 1px solid $maincolor !important;
+  box-shadow: none !important;
+}
+::selection {
+  color: white;
+  background-color: $maincolor;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+span{
+  font-size: 14px;
+}
+// my framework
+.maincolor {
+  color: $maincolor !important;
+}
+.secondcolor {
+  color: $secondcolor;
+}
+.thirdcolor {
+  color: $thirdcolor;
+}
+.bg-main {
+  background-color: $maincolor;
+}
+.bg-second {
+  background-color: $secondcolor;
+}
+.pointer {
+  cursor: pointer;
+}
+ul.star-list {
+  li {
+    display: inline-block;
+    i {
+      color: #666 !important;
+      font-size: 12px;
+      margin-right: 3px;
+    }
+  }
+}
+.line-through {
+  text-decoration: line-through;
+}
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// show categories list
+.show {
+  display: block !important;
+}
+// gallery section
+.gallery {
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+}
+
+// services section
+.serv-num {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  background-color: rgb(15, 166, 226);
+}
+.serv-head {
+  p {
+    font-size: 14px;
+    color: #333;
+  }
+}
+// faq section
+.faqs {
+  .accordion-button:focus {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: $maincolor;
+    color: white !important;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: $maincolor;
+    color: white !important;
+  }
+  .accrodion-header {
+    &:hover {
+      background-color: $maincolor !important;
+    }
+  }
+}
+// blog global
+.rece-posts {
+  .post-head {
+    background-color: #f1f1f1;
+  }
+  .post-body {
+    .sm-post {
+      img {
+        width: 80px;
+      }
+      h6 {
+        &:hover {
+          color: $maincolor;
+        }
+      }
+      span,
+      i {
+        color: #777;
+      }
+    }
+  }
+}
+// sdie bar categories 
+.sidebar {
+  width: fit-content;
+}
+// for login page
+.left-login{
+  .btn{
+    bottom: 24px;
+    left: 24px;
+  }
+}
+// product profile
+.product-box{
+  input[type=number]{
+    padding:5px 10px;
+    &:focus{
+      outline: none;
+    }
+  }
+  .social-product{
+    
+    li{
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      line-height: 30px;
+      margin-right: 5px;
+      transition: .3s;
+      cursor: pointer;
+      &:nth-child(1){
+        background-color: #1877f2;
+      }
+      &:nth-child(2){
+        background-color: #1da1f2;
+      }
+      &:nth-child(3){
+        background-color: #e1306c;
+      }
+      &:nth-child(4){
+        background-color: #075e54;
+      }
+      &:hover{
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+.size-chart{
+  background-color: rgba(51, 51, 51, 0.513);
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: .7s;
+  z-index: 2;
+  img{
+    width: 50%;
+  }
+  i{
+    padding: 10px;
+    background-color: $maincolor;
+    color: white;
+    position: absolute;
+    top: 35px;
+    right: 50px;
+  }
+  &.active{
+    transform: translateY(0px);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  @media(max-width:767px){
+    img{
+      width: 80% !important
+    }
+  }
+  .modal{
+    .rating-img{
+      width:100%
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.account ul li {
+  background-color: rgba(221, 221, 221, 0.418);
+  border: 1px solid #ddd;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.account ul li.active {
+  border: none !important;
+  border-top: 1px solid #333 !important;
+  border-right: 1px solid #ddd !important;
+  background-color: #fff;
+}
+
+.account > div:not(.accountedit) {
+  background-color: #03a9f4;
+}
+
+.account > div:not(.accountedit) .info {
+  background-color: #0288d1;
+  color: rgba(221, 220, 220, 0.815);
+}
+
+.account > div.noactive {
+  display: none;
+}
+
+.account > div.active {
+  display: block;
+}
+/*# sourceMappingURL=profile.css.map */

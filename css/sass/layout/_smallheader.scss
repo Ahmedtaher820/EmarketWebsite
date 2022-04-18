@@ -1,0 +1,31 @@
+.smheader {
+  .sm-header {
+    @include media(mobile) {
+      flex-direction: column;
+      gap: 10px;
+      .center-content {
+        display: none;
+      }
+    }
+  }
+  background-color: rgba(221, 221, 221, 0.609);
+  color: $secondcolor;
+  font-size: 13px;
+  .right-content {
+    a {
+      transition: 0.3s;
+      color: $secondcolor;
+      &:hover {
+        color: $maincolor !important;
+      }
+    }
+  }
+  .social {
+    li {
+      display: inline-block;
+    }
+    li:not(:nth-child(1)) {
+      margin-left: 12px;
+    }
+  }
+}

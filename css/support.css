@@ -1,0 +1,37 @@
+.support h2 {
+  color: #555;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.support h2::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #ff9600;
+}
+
+.support .sup-box .col-md-6 > div {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.support .sup-box .col-md-6 > div i:first-of-type {
+  font-size: 80px;
+}
+
+.support .sup-box .col-md-6 > div p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.support .sup-box .col-md-6 > div:hover {
+  background-color: #333;
+}
+/*# sourceMappingURL=support.css.map */

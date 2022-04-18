@@ -1,0 +1,30 @@
+.account{
+    ul{
+        li{
+            background-color: rgba(221, 221, 221, 0.418);
+            border: 1px solid #ddd;
+            transition: .3s;
+            &.active{
+                border: none !important;
+                border-top: 1px solid #333 !important;
+                border-right: 1px solid #ddd !important;
+                background-color: #fff;
+            }
+        }
+    }
+    > div:not(.accountedit){
+        background-color: #03a9f4;
+        .info{
+            background-color: #0288d1;
+            color: rgba(221, 220, 220, 0.815);
+        }
+    }
+    > div{
+         &.noactive{
+            display: none;
+        }
+        &.active{
+            display:block;
+        }
+    }
+}

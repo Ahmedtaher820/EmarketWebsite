@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Login
+    include pug/stylelink
+    block stylefile
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    div(class="contact") 
+      .container
+        nav(class="my-4")
+          ol(class="breadcrumb")
+            li(class="breadcrumb-item  ")
+              a(href="index.html",class="text-dark text-decoration-none") HOME
+            li(class="breadcrumb-item active")
+              a(href="login.html",class="text-dark") LOGIN
+        div(class="login-box")      
+          .row
+            .col-md-6
+              div(class="left-login p-4 d-flex flex-column gap-3 bg-light shadow rounded-3 mb-4 mb-md-0")
+                h4(class="bm-0 text-secondary") Login
+                div(class="login-input-box")
+                  label(class="form-label text-secondary",for="email") Email Adress:
+                  input(type="email",id="email",class="form-control")
+                div(class="login-input-box mb-md-3 mt-0")
+                  label(class="form-label text-secondary",for="password") Password:
+                  input(type="password",id="password",class="form-control") 
+                  a(href="#",class="text-decoration-none") 
+                button(class="btn btn-dark mt-md-3 mt-0",class="px-4",onclick="userLogin()",style={"width":"fit-content"}) Sign in
+            .col-md-6
+              div(class="right-login p-4 d-flex flex-column gap-3 bg-light shadow rounded-3 position-relative")
+                h4(class="bm-0 text-secondary") New Customer?
+                p Create an account with us and you'll be able to:
+                ul(class="ms-4")
+                  li(class="mb-1") Check out faster
+                  li(class="mb-1") Save multiple shipping addresses
+                  li(class="mb-1") Access your order history
+                  li(class="mb-1") Track new orders
+                  li Save items to your wish list
+                a(class="btn btn-dark px-4",href="register.html",style={"width":"fit-content"}) Create Account
+    include pug/layout/footer.pug
+    include pug/scripts.pug  
+    script(src="js/loginuser.js")

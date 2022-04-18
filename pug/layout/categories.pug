@@ -1,0 +1,114 @@
+div(class="categories")
+  div(class="cate-heading px-3 py-3 border-bottom d-flex align-items-center")
+    i(class="fa-solid fa-gem me-3 maincolor")
+    h6(class="fs-6 mb-0") ALL GATEGORIES
+    i(class="fa-solid fa-bars pointer")
+  ul(class="border list-unstyled catelist")
+    li(class="py-2 border-bottom list pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span Accessories
+        i(class="fa-solid fa-chevron-right",onclick="show(event)")
+      ul(class="list-unstyled accessorieslist list px-0 py-2")
+        li(class=" list position-relative  py-2 border-top")
+          div(class="list-content d-flex justify-content-between align-items-center ")
+            span Baby's Clothing
+            i(class="fa-solid fa-chevron-right",onclick="show(event)")
+          ul(class="list-unstyled border-bottom py-2")
+            +catelistinside([{head:"Bags & Shoes"},{head:"Shoes Clothing"},{head:"Short"},{head:"Sports Light"},{head:"Watches Kid"}])
+        li(class=" list position-relative  pb-2")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Men's Clothing
+            i(class="fa-solid fa-chevron-right",onclick="show(event)")
+          ul(class="list-unstyled border-bottom py-2")
+            +catelistinside([{head:"Down Jackets"},{head:"Parkas"},{head:"Suits & Blazer"},{head:"Trench"},{head:"Wool & Blends"}])
+        li(class=" list position-relative  pb-2")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Outwear & Jacet
+            i(class="fa-solid fa-chevron-right",,onclick="show(event)")
+          ul(class="list-unstyled border-bottom py-2")
+            +catelistinside([{head:"Cargo Pants"},{head:"Casual Pants"},{head:"Harem Pants"},{head:"Sweatpants"}])
+        li(class=" list position-relative  pb-2")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Sports & Outdoors
+            i(class="fa-solid fa-chevron-right",,onclick="show(event)")
+          ul(class="list-unstyled border-bottom py-2")
+            +catelistinside([{head:"Automobiles"},{head:"Loremcia"},{head:"Orinane Frat"},{head:"Orinane Frats"},{head:"Shaney"}])
+        li(class=" list position-relative  pb-2")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Woman Clothing
+            i(class="fa-solid fa-chevron-right",,onclick="show(event)")
+          ul(class="list-unstyled border-bottom py-2")
+            +catelistinside([{head:"Dance Shoes"},{head:"Hiking Shoes"},{head:"Maternity"},{head:"Running Shoes"},{head:"Sahra Show"}])                
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span Computer
+        i(class="fa-solid fa-chevron-right",onclick="show(event)")
+      ul(class="list-unstyled cartelist  list px-0 py-2")
+        li(class=" list position-relative  py-2 border-top")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Clone Tshirt
+            i(class="fa-solid fa-chevron-right",onclick="show(event)")
+          ul(class="list-unstyled py-2")
+            +catelistinside([{head:"intimates"},{head:"jumpsuites"},{head:"Suits & Sets"},{head:"Tank Tops"}])
+        li(class=" list position-relative  pb-2")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Jeans
+            i(class="fa-solid fa-chevron-right",onclick="show(event)")
+          ul(class="list-unstyled py-2")
+            +catelistinside([{head:"Accessories"},{head:"Gloves"},{head:"Hats & Caps"},{head:"Leggins"},{head:"Scarves & Wraps"}])    
+        li(class=" list position-relative  pb-2")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Robes
+            i(class="fa-solid fa-chevron-right",onclick="show(event)")
+          ul(class="list-unstyled py-2")
+            +catelistinside([{head:"Basic Jacket"},{head:"Blazers"},{head:"Down Coats"},{head:"Parkas"},{head:"Real Fur"}])    
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span Maternity
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span Smartphone
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span Jewelery & Watches
+        i(class="fa-solid fa-chevron-right",onclick="show(event)")     
+      ul(class="list-unstyled cartelist  list px-0")
+        li(class=" list position-relative  py-2")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Watches
+        li(class=" list position-relative  pb-2")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Utility
+            i(class="fa-solid fa-chevron-right",onclick="show(event)")
+          ul(class="list-unstyled py-2")
+            +catelistinside([{head:"Agen Mafin"},{head:"Delicacies"},{head:"Publication"},{head:"Girls New"}])    
+        li(class=" list position-relative  pb-2")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Garden
+        li(class=" list position-relative  pb-2")
+          div(class="list-content d-flex justify-content-between align-items-center")
+            span Swatch Kide
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span Sport Clothing
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span gifts,sports,toys
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span home furniture
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span kitchen
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span category deals
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span Jewelry
+    li(class="py-2 border-bottom list position-relative pointer px-3")
+      div(class="list-content d-flex justify-content-between align-items-center")
+        span fashion
+        i(class="fa-solid fa-chevron-right",onclick="show(event)")
+      ul(class="list-unstyled py-2")
+        +catelistinside([{head:"Electronic"},{head:"Cosmetice"},{head:"bags"},{head:"jewelrys"},{head:"smart TVS"},{head:"sports"}])    

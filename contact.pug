@@ -1,0 +1,61 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Contact
+    include pug/stylelink
+    block stylefile
+      link(rel="stylesheet" , href="css/contact.css")
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    div(class="contact") 
+      .container
+        nav(class="my-4")
+          ol(class="breadcrumb")
+            li(class="breadcrumb-item  ")
+              a(href="index.html",class="text-dark text-decoration-none") HOME
+            li(class="breadcrumb-item active")
+              a(href="contact.html",class="text-dark") CONTACT
+        div(class="map my-3")      
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27327.894343166547!2d30.922674449282482!3d31.110099109927866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7ab78f233021f%3A0xc2cdebb004a208f8!2sKafr%20El-Shaikh%2C%20Qism%20Kafr%20El-Shaikh%2C%20Kafr%20el-Sheikh%2C%20Gharbia%20Governorate!5e0!3m2!1sen!2seg!4v1648315848096!5m2!1sen!2seg" width="625" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="googlemap"></iframe>
+        .row
+          .col-md-8  
+            form(class="")
+              h4(class="fs-4 mb-3") Contact Us
+              span If you nedd assistance selecting the right product of you then get it touch! Our friendly staff can offer you expert advice 7 days a week over the phone, by email or at one of our stores. We're here to help you get broad!
+              .row(class="mt-5")
+                .col-md-6
+                  div(class="form-input position-relative border px-4 mb-5 name",data-type="")
+                    label(for="name") Phone Number
+                    input(type="text",required,id="name")
+                .col-md-6
+                  div(class="form-input  position-relative border px-4 mb-5",data-type="phone")
+                    label(for="name") Phone Number
+                    input(type="text",id="name",required)
+                .col-md-6
+                  div(class="form-input  position-relative border px-4 mb-5",data-type="email")
+                    label(for="Email") Email Address
+                    input(type="email",id="Email",required)
+                .col-md-6
+                  div(class="form-input  position-relative border px-4 mb-5",data-type="order")
+                    label(for="Order") Order Number
+                    input(type="text",id="Order")
+                .col-md-6
+                  div(class="form-input  position-relative border px-4 mb-5",data-type="company")
+                    label(for="Company") Company Name
+                    input(type="text",id="Company")
+                .col-md-6
+                  div(class="form-input  position-relative border px-4 mb-5",data-type="rma")
+                    label(for="rma") RMA Number
+                    input(type="text",id="rma")
+                .col-md-6
+                  label(for="message",class="d-block") Comments/Questions
+                  textarea(class="w-100",rows="6",id="message",class="p-2" ,required)   
+              button(class="btn btn-dark mt-3" ) Submit Form                
+    
+    include pug/layout/footer.pug
+    include pug/scripts.pug  

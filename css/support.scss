@@ -1,0 +1,36 @@
+@import "../css/sass/helpers/variable";
+.support {
+  h2 {
+    color: #555;
+    width: fit-content;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: $maincolor;
+    }
+  }
+  .sup-box {
+    .col-md-6 {
+      > div {
+        transition: 0.3s;
+        i {
+          &:first-of-type {
+            font-size: 80px;
+          }
+        }
+        p {
+          font-size: 14px;
+          line-height: 1.8;
+        }
+        &:hover {
+          background-color: #333;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+div(class="ps-3 posts")
+  div(class="post-header d-flex gap-3 align-items-center")
+    span VIEW AS: 
+    ul(class="list-unstyled")
+      li(class="d-inline-block pointer active")
+        i(class="fa-solid fa-table-cells-large")
+      li(class="d-inline-block pointer")
+        i(class="fa-solid fa-bars")  
+  div(class="posts-boxes mt-5")      
+    .row
+      .col-md-3
+        //- +posts([{srcimg:"../../assets/user1.jpg", head:"integer enim purus",user:"Ahmed",date:"4th Apr 2019"}])
+        div(class="p-box")
+          div(class="box-img")
+            img(src="../../assets/user1.jpg",alt="",class="img-fluid")
+          div(class="p-content d-flex flex-column gap-2")  
+            h6(class="fs-6") integer enim purus
+            div(class="member-info d-flex gap-3 align-items-center")
+              div(class="info-1 d-flex align-items-center")
+                i(class="fa-solid fa-user me-2")
+                span Ahmed
+              div(class="info-2 d-flex align-items-center")  
+                i(class="fa-solid fa-clock me-2")
+                span 2/2/2002
+        div(class="p-box")
+          div(class="box-img")
+            img(src="../../assets/user1.jpg",alt="",class="img-fluid")
+          div(class="p-content d-flex flex-column gap-2")  
+            h6(class="fs-6") integer enim purus
+            div(class="member-info d-flex gap-3 align-items-center")
+              div(class="info-1 d-flex align-items-center")
+                i(class="fa-solid fa-user me-2")
+                span Ahmed
+              div(class="info-2 d-flex align-items-center")  
+                i(class="fa-solid fa-clock me-2")
+                span 2/2/2005        
+            //- a(href=item.link,class="text-decoration-none")
+              i(class="fa-solid fa-play me-1")
+              span Read More
+      //- .col-md-3
+      //-   +posts([{srcimg:"../../assets/user2.jpg", head:"integer enim purus",user:"Ahmed",date:"4th Apr 2019"}])
+      //- .col-md-3
+      //-   +posts([{srcimg:"../../assets/user3.jpg", head:"integer enim purus",user:"Ahmed",date:"4th Apr 2019"}])
+      //- .col-md-3
+      //-   +posts([{srcimg:"../../assets/user4.jpg", head:"integer enim purus",user:"Ahmed",date:"4th Apr 2019"}])
+      //- .col-md-3
+      //-   +posts([{srcimg:"../../assets/user5.jpg", head:"integer enim purus",user:"Ahmed",date:"4th Apr 2019"}])
+      //- .col-md-3
+      //-   +posts([{srcimg:"../../assets/user6.jpg", head:"integer enim purus",user:"Ahmed",date:"4th Apr 2019"}])
+      //- .col-md-3
+      //-   +posts([{srcimg:"../../assets/user7.jpg", head:"integer enim purus",user:"Ahmed",date:"4th Apr 2019"}])            
+

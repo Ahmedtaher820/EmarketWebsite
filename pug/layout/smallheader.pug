@@ -1,0 +1,21 @@
+.smheader(class="py-2")
+  div(class=" container py-0")
+    div(class="d-flex justify-content-between align-items-center sm-header")
+      .left-content
+        span welcome to Emarket! #[a(href="register.html" class="text-decoration-none maincolor") Resgister] or #[a(href="login.html",class="text-decoration-none maincolor") Login]
+      .center-content
+        span(class="hr")
+        span(class="min")  
+        span(class="sec")  
+      div(class="right-content d-flex align-items-center")
+        div(class="px-2")
+          a(href="#" class="text-decoration-none d-block link-primary") 
+            i(class="fa-solid fa-gift me-2 ")  
+            span Gift Certificates
+        div(class="px-3 border-end border-start")
+          a(href="profile.html" class="text-decoration-none") 
+            i(class="fa-solid fa-user me-2 ")  
+            span My Account
+        include social.pug    
+
+

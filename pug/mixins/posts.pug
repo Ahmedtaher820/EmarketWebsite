@@ -1,0 +1,17 @@
+mixin posts(items)
+  each item in items
+    div(class="p-box")
+      div(class="box-img")
+        img(src=item.srcimg,alt="",class="img-fluid")
+      div(class="p-content d-flex flex-column gap-2")  
+        h6(class="fs-6")= item.head
+        div(class="member-info d-flex gap-3 align-items-center")
+          div(class="info-1 d-flex align-items-center")
+            i(class="fa-solid fa-user me-2")
+            span= item.user
+          div(class="info-2 d-flex align-items-center")  
+            i(class="fa-solid fa-clock me-2")
+            span= item.date
+        a(href=item.link,class="text-decoration-none")
+          i(class="fa-solid fa-play me-1")
+          span Read More

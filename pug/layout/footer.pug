@@ -1,0 +1,141 @@
+//- its style in home page scss in line 551
+div(class="footer-nav py-4 my-5 mb-3")
+  div(class="container d-flex justify-content-md-between justify-content-center align-items-center ")
+    div(class="logo")
+      img(class="img-fluid pointer" , src="../../assets/logo2.png" alt="")
+    nav(class="d-none d-md-block")
+      ul(class="list-unstyled")
+        li 
+          a(href="#") Product Support
+        li 
+          a(href="#") PCs Setup
+        li 
+          a(href="#") Services
+        li 
+          a(href="#") Conditions 
+        li 
+          a(href="#") Privacy Policy
+    div(class="social-box d-none d-md-block")      
+      include social.pug
+//- start footer
+div(class="footer  pt-5 pb-5 border-bottom")
+  div(class="container ")
+    div(class="row pb-5 border-bottom")
+      .col-md-3
+        .footer-box
+          h6(class="position-relative mb-5") CONTACT US
+          ul(class="list-unstyled contact-list")
+            li
+              i(class="fa-solid fa-location-dot")
+              span  San Luis Potosí, Centro Historico, SPL, Mexico
+            li 
+              i(class="fa-solid fa-phone")
+              span  (+0214)0 315 215
+            li 
+              i(class="fa-solid fa-envelope")
+              span  Marketing@MagenTech.Com
+            li 
+              i(class="fa-solid fa-clock")
+              span  Open Time: 8:00AM - 6:00PM 
+      .col-md-2
+        .footer-box
+          h6(class="position-relative mb-5") OUR SHOP
+          ul(class="list-unstyled")
+            li
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Product Support
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  PCs setup
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Services
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Condition  
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Privacy Policy
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Return Exchange     
+      .col-md-2
+        .footer-box
+          h6(class="position-relative mb-5") Information
+          ul(class="list-unstyled")
+            li
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Layout
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Features
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Shop
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Bonus page  
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Blog
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Contact Us             
+      .col-md-2
+        .footer-box
+          h6(class="position-relative mb-5") ALL CATEGORIES
+          ul(class="list-unstyled")
+            li
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Accessories
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Computer
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Maternity
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Smartphone  
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  Jewelry & Watches
+            li 
+              i(class="fa-solid fa-circle-dot me-2")
+              span  View All        
+      .col-md-2
+        .footer-box
+          h6(class="position-relative mb-5") INSTAGRAM GALLERY          
+    div(class="newsletter pt-5")
+      .row
+        .col-5
+          div(class="newsletter-text d-flex gap-2")
+            i(class="fa-solid fa-hand-pointer fs-2 mt-2 me-2")
+            .txt 
+              h3(class="mb-0") Signup For Newsletter
+              span(class="thirdcolor") We’ll never share your email address with a third-party.
+        .col-7
+          div(class="newsletter-input d-flex")
+            input(typesetting="text" , placeholder="Your Email address" , class="form-control py-2 flex-1")
+            div(class="sub text-light bg-main py-3 px-4 pointer") SUBSCRIBE
+div(class="right-copy py-4")
+  .container
+    div(class="rightcopy-box d-flex justify-content-between align-items-center")
+      span © 2022 SB eMarket - 3 Powered by #[a(href="#") BigCommerce]. Designed by #[a(href="#") Ahmed taher]
+      .right-img
+        img(src="../../assets/copy1.png",alt="")
+        img(src="../../assets/copy2.png",alt="")
+        img(src="../../assets/copy3.png",alt="")
+        img(src="../../assets/copy4.png",alt="")
+        img(src="../../assets/copy5.png",alt="")
+
+//- start go-up section 
+
+div(class="goup position-fixed")
+  include social.pug
+  div(class="group mt-2")
+    button(class=" show-social d-block mb-1 center-tems" type="button")
+      i(class="fa-solid fa-window-minimize")
+      i(class="fa-solid fa-plus")
+    button(class=" go-up d-block" type="button")
+      i(class="fa-solid fa-chevron-up") 

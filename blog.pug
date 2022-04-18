@@ -1,0 +1,37 @@
+//- include pug/mixins/posts.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Blog
+    include pug/stylelink
+    block stylefile
+      link(rel="stylesheet" , href="css/blog.css")
+  body
+    include pug/layout/smallheader.pug 
+    include pug/layout/header.pug
+    include pug/layout/bigheader.pug
+    div(class="blog") 
+      .container
+        nav(class="my-4")
+          ol(class="breadcrumb")
+            li(class="breadcrumb-item  ")
+              a(href="index.html",class="text-dark text-decoration-none") HOME
+            li(class="breadcrumb-item active")
+              a(href="blog.html",class="text-dark") BLOG
+        div(class="blog-content my-3")
+          a(class="sidebar border px-3 py-1 pointer mb-3 d-block d-lg-none text-decoration-none",data-bs-toggle="offcanvas",data-bs-target="#offcanvasExample",aria-controls="offcanvasExample")
+            i(class="fa-solid fa-bars me-3 text-secondary ")
+            span(class="text-secondary") SIDEBAR
+          .row
+            div(class="col-lg-3 d-none d-lg-block sidebar-box")
+              include pug/layout/categories.pug
+              include pug/layout/recent.pug
+            .col-md-9
+              include pug/layout/postscontent
+        //- MODAL
+        include pug/layout/catemodel.pug
+    include pug/layout/footer.pug
+    include pug/scripts.pug
