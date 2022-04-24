@@ -118,6 +118,22 @@ $(".blog-carousel").owlCarousel({
 });
 // Light Gallery
 lightGallery(document.getElementById("gallery"));
+// check if this admin or not to show dashboard icon in navigation bar
+let robotIcon = document.querySelector(".fa-robot");
+window.addEventListener("load", checkAdmin());
+async function checkAdmin() {
+  let userId = localStorage.getItem("user-market-id");
+  await fetch(`https://emarket3.herokuapp.com/api/users/getUserById/${userId}`)
+    .then((resolved) => resolved.json())
+    .then((data) => {
+      if (data.user.isAdmin) {
+        robotIcon.style.display = "inline-block";
+      }
+    })
+    .catch(() => {
+      robotIcon.style.display = "none";
+    });
+}
 
 // filter carousel
 let list = document.querySelectorAll(".fashion-box ul li");
@@ -254,23 +270,19 @@ function viewAs(elemnet) {
   elemnet.target.classList.add("active");
   boxes.forEach((e) => {
     e.className = "";
-    if (elemnet.target.textContent == 2) {
+    if (elemnet.target.dataset.count == 2) {
       e.className = "col-md-6";
-    } else if (elemnet.target.textContent == 3) {
+    } else if (elemnet.target.dataset.count == 3) {
       e.className = "col-md-4";
-    } else if (elemnet.target.textContent == 4) {
+    } else if (elemnet.target.dataset.count == 4) {
       e.className = "col-md-3";
-    } else {
+    } else if(elemnet.target.dataset.count == 1){
+      console.log(elemnet.target.textContent)
       e.className = "col-md-12";
     }
   });
 }
-// showlist
-// let listproduct = document.querySelector(".categories .catelist");
-// let listbars = document.querySelector(".categories .cate-heading .fa-bars");
-// listbars.onclick = function () {
-//   listproduct.classList.toggle("show");
-// };
+
 // label aniamtion in contact us
 let formInputBoxes = document.querySelectorAll("form .form-input");
 formInputBoxes.forEach((box) => {
@@ -298,37 +310,6 @@ function changeAccountSetting(item) {
     .classList.add("active");
 }
 
-// upload list wish in profile page
-// window.addEventListener("load",myaccountwish)
-// let wish = document.querySelector(".account-box .main-box");
-// function myaccountwish(product) {
-// var mainDiv = document.createElement("div");
-// var mainText = document.createTextNode("hello");
-// mainDiv.appendChild(mainText);
-// var divImg = document.createElement("img")
-// var divSpan = document.createElement("span")
-// var divUl = document.createElement("ul")
-// var divLi = document.createElement("li")
-// var divIcon = document.createElement("i")
-// console.log(mainDiv);
-//   console.log(document.querySelector("[data-product=" + product + "]"));
-//   console.log(
-//     document.querySelector("[data-product=" + product + "]").firstElementChild
-//   );
-//   console.log(
-//     document.querySelector("[data-product=" + product + "]").lastElementChild
-//       .children[1]
-//   );
-//   console.log(
-//     document.querySelector("[data-product=" + product + "]").lastElementChild
-//       .children[2]
-//   );
-//   wish.appendChild(
-//     document.querySelector("[data-product=" + product + "]").lastElementChild
-//       .children[2]
-//   );
-// }
-
 // upload product in product page
 function openproduct(element) {
   let productArray = [];
@@ -348,12 +329,12 @@ function openproduct(element) {
       .lastElementChild.textContent;
   // productArray.push(priceSale);
   let allProductInfoObj = {
-    src:imgSrc,
-    content:productContent,
-    price : priceProduct,
-    sale : priceSale
-  }
-  productArray.push(allProductInfoObj)
+    src: imgSrc,
+    content: productContent,
+    price: priceProduct,
+    sale: priceSale,
+  };
+  productArray.push(allProductInfoObj);
   window.localStorage.setItem("product-info", JSON.stringify(productArray));
   goToProductPage();
 }
@@ -361,4 +342,7 @@ function goToProductPage() {
   window.location.href = "product.html";
 }
 
-console.log(JSON.parse(localStorage.getItem("product-info")))
+console.log(JSON.parse(localStorage.getItem("product-info")));
+// Check if users is Admin Or Not
+window.addEventListener("load", () => {});
+// alert to tell user he is login already

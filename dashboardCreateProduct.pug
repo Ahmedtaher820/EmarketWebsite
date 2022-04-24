@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0",description="Market website")
+    block pagetitle
+      title Create Product
+    link(rel="stylesheet" , href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css")
+    link(rel="stylesheet" , href="../css/all.min.css")
+    link(rel="stylesheet" , href="css/dashboard.css")
+  body
+    .dashboard
+      include pug/layout/dashboard/dashboardslider.pug
+      div(class="right-box")            
+        include pug/layout/dashboard/dashboardHeader.pug
+        div(class="createProduct text-center mt-5")
+          h2(class="fs-2 mb-5") Let's Go To Create New Product
+          form(class="text-start mx-auto border p-4")
+            .container
+              .row
+                .col-md-6
+                  div(class="create-inputs mb-2")  
+                    label(class="form-label",for="productname") product Name
+                    input(type="text",class="form-control",id="productname",placeholder="Enter Product Name")
+                .col-md-6    
+                  div(class="create-inputs mb-2")
+                    label(class="form-label",for="sellingPrice") selling Price
+                    input(type="text",class="form-control",id="sellingPrice",placeholder="Enter Selling Price")
+                .col-md-6    
+                  div(class="create-inputs mb-2")  
+                    label(class="form-label",for="buyPrice") Purchasing price
+                    input(type="text",class="form-control",id="buyPrice",placeholder="Enter Purchasing price")
+                .col-md-6    
+                  div(class="create-inputs mb-2")  
+                    label(class="form-label",for="size") size
+                    select(id="size",class="form-control")
+                      option(value="small") small
+                      option(value="mediuum") mediuum
+                      option(value="larg") larg
+                      option(value="xlarg") xlarg
+                      option(value="xxlarge") xxlarge
+                .col-md-6      
+                  div(class="create-inputs mb-2")  
+                    label(class="form-label",for="color") Color
+                    input(type="text",class="form-control",id="color",placeholder="Enter Color")
+                .col-md-6    
+                  div(class="create-inputs mb-2")  
+                    label(class="form-label",for="brand") Brand
+                    input(type="text",class="form-control",id="brand",placeholder="Enter Brand")
+                .col-md-6    
+                  div(class="create-inputs mb-2")  
+                    label(class="form-label",for="productcountry") Country
+                    include pug/layout/countrylist.pug
+                .col-md-6    
+                  div(class="create-inputs mb-2")  
+                    label(class="form-label",for="productCity") City
+                    input(type="text",class="form-control",id="productCity",placeholder="Enter Porduct City")
+                .col-md-6    
+                  div(class="create-inputs mb-2")  
+                    label(class="form-label",for="productname") Quantity
+                    input(type="number",class="form-control",id="quantity",placeholder="Enter Qunatity")         
+                .col-md-6    
+                  div(class="create-inputs mb-2")  
+                    label(class="form-label",for="productname") Image
+                    input(type="file",class="form-control",accept="image/**",id="file",onchange="productImgFun()")    
+    script(src="js/dashboard.js")

@@ -1,0 +1,251 @@
+@import "sass/helpers/variable";
+@import "sass/helpers/global";
+
+.dashboard {
+  .left-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    min-height: 100vh;
+    transition: 0.3s;
+    animation: fadex .5s 1 ease-in-out;
+    z-index: 999;
+    background-color: #fff;
+    &.hidden {
+      display: none;
+    }
+    .left-header {
+      height: 65px;
+      background-color: $maincolor;
+      img {
+        width: 90%;
+      }
+      .closeSlider{
+        top: 10px;
+        right: 10px;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s;
+        &:hover{
+          color: $maincolor;
+          background-color: #fff;
+        }
+        @media(max-width:991px){
+          pointer-events: auto;
+          opacity: 1;
+        }
+      }
+    }
+
+    .dash-menu {
+      ul {
+        li {
+          color: #333;
+          cursor: pointer;
+
+          > a {
+            color: #333;
+          }
+
+          .list-head {
+            pointer-events: none;
+
+            .icon {
+              width: 38px;
+            }
+
+            i {
+              transition: 0.3s;
+            }
+          }
+
+          ul {
+            height: 0px;
+            overflow: hidden;
+            transition: 0.3s;
+
+            &.active {
+              height: 210px;
+            }
+
+            li {
+              padding: 20px 0px;
+              text-align: center;
+              background-color: #333;
+              color: white;
+
+              a {
+                color: #fff;
+                margin-right: 10px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .right-box {
+    margin-left: 25%;
+    width: 75%;
+    min-height: 100vh;
+
+    &.active {
+      width: 100%;
+      margin-left: 0px;
+    }
+    header {
+      height: 65px;
+      .logo {
+        cursor: pointer;
+        [class*="-width"] {
+          height: 2px;
+          background-color: $maincolor;
+          margin-bottom: 5px;
+          transition: 0.3s;
+        }
+        .max-width {
+          width: 30px;
+        }
+        .med-width {
+          width: 20px;
+        }
+        .min-width {
+          width: 10px;
+        }
+        &:hover {
+          .med-width,
+          .min-width {
+            width: 30px;
+          }
+        }
+      }
+      nav {
+        flex: 1;
+        text-align: right;
+        > ul {
+          > li {
+            display: inline-block;
+            margin-left: 50px;
+            cursor: pointer;
+            ul {
+              top: 45px;
+              left: -100px;
+              background-color: #fff;
+              width: 160px;
+              height: 0px;
+              overflow: hidden;
+              transition: 0.3s;
+              border: 1px solid #eee;
+              &.active {
+                height: 120px;
+                overflow: visible;
+                padding: 24px 16px;
+              }
+              li {
+                a,&:nth-child(3) {
+                    color: #333;
+                    transition: 0.3s;
+                    text-decoration: none;
+                }
+                &:hover {
+                  a,&:nth-child(3) {
+                    color: $maincolor;
+                  }
+                }
+
+                span {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .profile{
+      .profile-img{
+        width: 250px;
+        height: 150px;
+        margin:30px auto;
+        img{
+          width: 100%;
+        }
+      }
+      ul.account-list{
+        li{
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+          &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0px;
+            height: 100%;
+            background-color: $maincolor;
+            transition: .7s;
+            z-index: -1;
+          }
+          &:hover::after,&.active::after{
+            width: 100%;
+          }
+          &:hover,&.active{
+            color: #fff;
+          }
+
+        }
+      }
+      .acc.active{
+        display: block;
+        animation: fade 0.9s 1 ease-in-out;
+      }
+      .acc.noactive{
+        display: none;
+      }
+    }
+    // craete Product css
+    .createProduct{
+      h3{
+        transition: .3s;
+        &:hover{
+          text-shadow: 2px 15px 5px #333;
+        }
+      }
+      form{
+        width: 80%;
+      }
+    }
+  }
+}
+// slider responsive
+
+// fade account setting sections
+@keyframes fade{
+  0%{
+    transform: scale(0) translateX(100%);
+  }
+  100%{
+    transform: scale(1) translateX(0px);
+  }
+}
+// fade slider 
+@keyframes fadex{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}

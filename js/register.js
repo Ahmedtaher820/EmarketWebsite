@@ -34,7 +34,7 @@ async function registerBtn() {
         },
       }
     );
-    console.log(register)
+    console.log(register);
     if (register.ok) {
       window.location.href = "login.html";
     }
@@ -45,3 +45,10 @@ async function registerBtn() {
 function getElement(id) {
   return document.getElementById(id);
 }
+// check if user login exist go to home page
+window.addEventListener("load", () => {
+  if (localStorage.getItem("user-market-token")) {
+    location.href = "index.html";
+    alert("You Are Logged In Already Logout To Login Again");
+  }
+});

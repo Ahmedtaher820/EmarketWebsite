@@ -1,0 +1,43 @@
+div(class="left-box border-end ")
+  div(class="left-header py-3 position-relative px-2  d-flex justify-content-center align-items-center")
+    a(href="index.html")
+      img(src="assets/logo2.png",alt="logo")
+    div(class="closeSlider position-absolute",onclick="closeSlider()")
+      i(class="fa-solid fa-close fs-5")  
+  div(class="dash-menu py-4 px-3 ")
+    ul(class="list-unstyled")
+      li(onclick="showList(event)" class="border-bottom pb-3")
+        div(class="list-head d-flex justify-content-between align-items-center pb-1")
+          div(class="d-flex align-items-center")
+            div(class="icon")
+              i(class="fa-solid fa-shirt fs-6 me-1")
+            span(class="fs-5") Product
+          i(class="fa-solid fa-chevron-down ms-auto d-inline-block chev-list")
+        ul(class="list-unstyled")
+          li
+            a(href="#",class="text-decoration-none") Show Products
+            i(class="fa-solid fa-eye")
+          li
+            a(href="#",class="text-decoration-none") Edit/Delete Product
+            i(class="fa-solid fa-pen-to-square")
+          li
+            a(href="dashboardCreateProduct.html",class="text-decoration-none") Upload Product
+            i(class="fa-solid fa-upload")
+      li(class="py-3 border-bottom")
+        a(href="order.html" class=" text-decoration-none")
+          div(class="list-head d-flex align-items-center")
+            div(class="icon")
+              i(class="fa-solid fa-clipboard-list fs-5 me-1")
+            span(class="fs-5") Order
+      li(class="py-3 border-bottom")
+        a(href="order.html" class=" text-decoration-none")
+          div(class="list-head d-flex align-items-center")
+            div(class="icon")
+              i(class="fa-solid fa-bag-shopping fs-5")
+            span(class="fs-5") Sales
+      li(class="py-3 border-bottom")
+        a(href="order.html" class=" text-decoration-none")
+          div(class="list-head d-flex align-items-center")
+            div(class="icon")
+              i(class="fa-solid fa-user-group fs-5")
+            span(class="fs-5") Client Review 

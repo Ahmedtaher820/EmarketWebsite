@@ -3,11 +3,11 @@ div(class="ps-3 shop-product mt-4 mt-md-0")
     div(class="option-one d-md-flex align-items-center d-none")
       h6(class="fs-6 me-3 mb-0") VIEW AS: 
       ul(class="list-unstyled")
-        li(class="active",onclick="viewAs(event)") 2
-        li(onclick="viewAs(event)") 3
-        li(onclick="viewAs(event)") 4
-        li(onclick="viewAs(event)") 
-          i(class="fa-solid fa-bars")
+        li(class="active",onclick="viewAs(event)",data-count="2") 2
+        li(onclick="viewAs(event)",data-count="3") 3
+        li(onclick="viewAs(event)",data-count="4") 4
+        li(onclick="viewAs(event)",data-count="1") 
+          i(class="fa-solid fa-bars",style="pointer-events:none")
     div(class="option-two d-flex align-items-center")
       h6(class="fs-6 mb-0 me-2") SORT BY: 
       select(class="pointer")

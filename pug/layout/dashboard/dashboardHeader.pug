@@ -1,0 +1,21 @@
+header(class="d-flex justify-content-between align-items-center border-bottom shadow-sm px-5")
+  div(class="logo",onclick="hiddenSlider()")
+    div(class="max-width")
+    div(class="med-width")
+    div(class="min-width")
+  nav
+    ul(class="list-unstyled nav-list")
+      li 
+        i(class="fa-solid fa-user-group fs-5")
+      li 
+        i(class="fa-solid fa-bell fs-5")
+      li(class="position-relative profile-list",onclick="showProfile(event)") 
+        i(class="fa-solid fa-user fs-5",style="pointer-events:none")
+        ul(class="list-unstyled position-absolute ")
+          li(class="pb-3 border-bottom text-start d-flex align-items-center")
+            a(href="dashboardprofile.html")
+              i(class="fa-solid fa-user fs-6",style="display:inline-block;width:25px")
+              span Profile
+          li(class="pt-3 text-start d-flex align-items-center",onclick="logout()")
+              i(class="fa-solid fa-arrow-right-from-bracket fs-6",style="display:inline-block;width:25px")
+              span Logout 
