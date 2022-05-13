@@ -33,7 +33,7 @@ html(lang="en")
                 .col-md-6    
                   div(class="create-inputs mb-2")  
                     label(class="form-label",for="size") size
-                    select(id="size",class="form-control")
+                    select(class="form-control",id="size")
                       option(value="small") small
                       option(value="mediuum") mediuum
                       option(value="larg") larg
@@ -49,7 +49,7 @@ html(lang="en")
                     input(type="text",class="form-control",id="brand",placeholder="Enter Brand")
                 .col-md-6    
                   div(class="create-inputs mb-2")  
-                    label(class="form-label",for="productcountry") Country
+                    label(class="form-label",for="productcountry",id="productcountry") Country
                     include pug/layout/countrylist.pug
                 .col-md-6    
                   div(class="create-inputs mb-2")  
@@ -63,4 +63,6 @@ html(lang="en")
                   div(class="create-inputs mb-2")  
                     label(class="form-label",for="productname") Image
                     input(type="file",class="form-control",accept="image/**",id="file",onchange="productImgFun()")    
+                div(class="error text-danger fs-5")
+                button(class="btn bg-dark text-light mx-auto mt-3 py-2 px-4",onclick="createproduct()",type="button",style="width:fit-content") Create
     script(src="js/dashboard.js")
