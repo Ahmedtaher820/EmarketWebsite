@@ -49,12 +49,16 @@ html(lang="en")
             .row
               .col-md-6
                 div(class="form-input mb-2 mb-md-3")
-                  label(class="label-form",for="fname") First Name
+                  label(class="label-form",for="fname") Name
                   input(class="form-control",id="fname",type="text")
               .col-md-6
                 div(class="form-input mb-2 mb-md-3")
-                  label(class="label-form",for="lame") Last Name
-                  input(class="form-control",id="lame",type="text")
+                  label(class="label-form",for="fAddress") First Address
+                  input(class="form-control",id="fAddress",type="text")
+              .col-md-6
+                div(class="form-input mb-2 mb-md-3")
+                  label(class="label-form",for="sAddress") Second Address
+                  input(class="form-control",id="sAddress",type="text")    
               .col-md-6
                 div(class="form-input mb-2 mb-md-3")
                   label(class="label-form",for="company") Company
@@ -69,16 +73,18 @@ html(lang="en")
                   input(class="form-control",id="email",type="email")
               .col-md-6
                 div(class="form-input mb-2 mb-md-3")
-                  label(class="label-form",for="pass") Password
-                  input(class="form-control",id="pass",type="password")
+                  label(class="label-form",for="country") Country
+                  input(class="form-control",id="country",type="text") 
               .col-md-6
                 div(class="form-input mb-2 mb-md-3")
-                  label(class="label-form",for="confpass") Confirm Password
-                  input(class="form-control",id="confpass",type="password") 
+                  label(class="label-form",for="city") City
+                  input(class="form-control",id="city",type="text")    
               .col-md-6
                 div(class="form-input mb-2 mb-md-3")
-                  label(class="label-form",for="currpass") Current Password
-                  input(class="form-control",id="currpass",type="password")
+                  label(class="label-form",for="zipCode") zipCode
+                  input(class="form-control",id="zipCode",type="text")               
             button(class="btn btn-dark py-2 px-4 mx-auto my-4",type="button") Update Details        
+            button(class="btn btn-dark py-2 px-4 mx-auto my-4 ms-3",type="button",onclick="logoutFun()")   Logout       
     include pug/layout/footer.pug
-    include pug/scripts.pug  
+    script(src="js/userProfile.js")
+    include pug/scripts.pug

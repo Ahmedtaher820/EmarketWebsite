@@ -105,39 +105,43 @@ function logout() {
   localStorage.removeItem("user-market-id");
   localStorage.removeItem("user-market-token");
   location.href = "index.html";
+  location.reload();
 }
 // Product image
-function productImgFun() {
-  let file = document.getElementById("file").files;
-  if (file.length > 0) {
-    var fileReader = new FileReader();
-    fileReader.onload = (event) => {
-      var picture = event.target.result;
-      return picture;
-    };
-    fileReader.readAsDataURL(file[0]);
-  }
-}
+var productImg;
+const productImgFun = function () {
+  // let file = document.getElementById("file").files;
+  // if (file.length > 0) {
+  //   var fileReader = new FileReader();
+  //   fileReader.onload = (event) => {
+  //     var picture = event.target.result;
+  //   };
+  //   return fileReader.readAsDataURL(file[0]);
+  // }
+  console.log(event.target.files[0]);
+  productImg = event.target.files[0];
 
+  // let fd = new FormData()
+  // localStorage.setItem("poductImg",JSON.stringify(image))
+  // console.log(JSON.parse(localStorage.getItem("poductImg"))[0])
+};
 // Create Product
-let productName = getElement("productname");
-let sellingPrice = getElement("sellingPrice");
-let buyPrice = getElement("buyPrice");
-let size = getElement("size");
+let productName = getElement("Title");
+let price = getElement("Price");
 let color = getElement("color");
 let brand = getElement("brand");
-let productcountry = getElement("country");
-let productCity = getElement("productCity");
+let description = getElement("Description");
+let subCategory = getElement("subCategory");
 let quantity = getElement("quantity");
+let Category = getElement("Category");
 let productArray = [
   productName,
-  sellingPrice,
-  buyPrice,
-  size,
+  price,
   color,
   brand,
-  productcountry,
-  productCity,
+  description,
+  subCategory,
+  Category,
 ];
 // to check if inputs is empty or not
 productArray.forEach((e) => {
@@ -149,36 +153,35 @@ productArray.forEach((e) => {
     }
   };
 });
-// to send prosduct data to DB
+// to send product data to DB
 let err = document.querySelector(".error");
-async function createproduct() {
-  console.log(productcountry.value);
-
-  let userToken = localStorage.getItem("user-market-token");
-  await fetch(`https://emarket3.herokuapp.com/api/products/creatProducts`, {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-      "x-auth-token": userToken,
-    },
-    body: JSON.stringify({
-      picture: productImgFun(),
-      name: productName.value,
-      sellingPrice: sellingPrice.value,
-      buyPrice: buyPrice.value,
-      size: size.value,
-      color: color.value,
-      brand: brand.value,
-      country: productcountry.value,
-      city: productCity.value,
-      quantity: quantity.value,
-    }),
-  })
-    .then((resolve) => resolve.json())
-    .then((data) => {
-      err.textContent = data.message;
-    });
-}
+// async function createproduct() {
+//   let userToken = localStorage.getItem("user-market-token");
+//   await fetch(`https://emarket3.herokuapp.com/api/products`, {
+//     method: "POST",
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({
+//       title: productName.value,
+//       description: description.value,
+//       quantity: quantity.value,
+//       price: price.value,
+//       colors: [color.value],
+//       imageCover: productImg.name,
+//       category: Category.value,
+//       brand: brand.value,
+//       subCategory: [subCategory.value],
+//     }),
+//   })
+//     .then((resolve) => resolve.json())
+//     .then((data) => {
+//       console.log(data);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }
 
 function getElement(id) {
   return document.getElementById(id);

@@ -121,18 +121,23 @@ lightGallery(document.getElementById("gallery"));
 // check if this admin or not to show dashboard icon in navigation bar
 let robotIcon = document.querySelector(".fa-robot");
 window.addEventListener("load", checkAdmin());
+
 async function checkAdmin() {
   let userId = localStorage.getItem("user-market-id");
+  if (!userId) {
+    robotIcon.parentElement.parentElement.style.display = "none";
+    return;
+  }
   await fetch(`https://emarket3.herokuapp.com/api/users/getUserById/${userId}`)
     .then((resolved) => resolved.json())
     .then((data) => {
       if (data.user.isAdmin) {
         robotIcon.style.display = "inline-block";
+      } else {
+        robotIcon.parentElement.parentElement.style.display = "none";
       }
     })
-    .catch(() => {
-      robotIcon.style.display = "none";
-    });
+    .catch(() => {});
 }
 
 // filter carousel
@@ -260,6 +265,7 @@ function show(event) {
   } else {
     event.target.style.transform = "rotate(0deg)";
   }
+  console.log(event.target.parentElement.nextElementSibling)
   event.target.parentElement.nextElementSibling.classList.toggle("show");
 }
 // make user choose dispaly product 2 or 3 or 4 or one in shop page
@@ -276,8 +282,8 @@ function viewAs(elemnet) {
       e.className = "col-md-4";
     } else if (elemnet.target.dataset.count == 4) {
       e.className = "col-md-3";
-    } else if(elemnet.target.dataset.count == 1){
-      console.log(elemnet.target.textContent)
+    } else if (elemnet.target.dataset.count == 1) {
+      console.log(elemnet.target.textContent);
       e.className = "col-md-12";
     }
   });

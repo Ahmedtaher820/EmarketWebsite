@@ -20,28 +20,25 @@ html(lang="en")
               .row
                 .col-md-6
                   div(class="create-inputs mb-2")  
-                    label(class="form-label",for="productname") product Name
-                    input(type="text",class="form-control",id="productname",placeholder="Enter Product Name")
+                    label(class="form-label",for="Title") Title
+                    input(type="text",class="form-control",id="Title",placeholder="Enter Product Title")
                 .col-md-6    
                   div(class="create-inputs mb-2")
-                    label(class="form-label",for="sellingPrice") selling Price
-                    input(type="text",class="form-control",id="sellingPrice",placeholder="Enter Selling Price")
-                .col-md-6    
-                  div(class="create-inputs mb-2")  
-                    label(class="form-label",for="buyPrice") Purchasing price
-                    input(type="text",class="form-control",id="buyPrice",placeholder="Enter Purchasing price")
-                .col-md-6    
-                  div(class="create-inputs mb-2")  
-                    label(class="form-label",for="size") size
-                    select(class="form-control",id="size")
-                      option(value="small") small
-                      option(value="mediuum") mediuum
-                      option(value="larg") larg
-                      option(value="xlarg") xlarg
-                      option(value="xxlarge") xxlarge
+                    label(class="form-label",for="Price") Price
+                    input(type="text",class="form-control",id="Price",placeholder="Enter Selling Price")
+                
+                //- .col-md-6    
+                //-   div(class="create-inputs mb-2")  
+                //-     label(class="form-label",for="size") size
+                //-     select(class="form-control",id="size")
+                //-       option(value="small") small
+                //-       option(value="mediuum") mediuum
+                //-       option(value="larg") larg
+                //-       option(value="xlarg") xlarg
+                //-       option(value="xxlarge") xxlarge
                 .col-md-6      
                   div(class="create-inputs mb-2")  
-                    label(class="form-label",for="color") Color
+                    label(class="form-label",for="color") Colors
                     input(type="text",class="form-control",id="color",placeholder="Enter Color")
                 .col-md-6    
                   div(class="create-inputs mb-2")  
@@ -49,12 +46,16 @@ html(lang="en")
                     input(type="text",class="form-control",id="brand",placeholder="Enter Brand")
                 .col-md-6    
                   div(class="create-inputs mb-2")  
-                    label(class="form-label",for="productcountry",id="productcountry") Country
-                    include pug/layout/countrylist.pug
+                    label(class="form-label",for="Description") description
+                    input(type="text",class="form-control", placeholder="Description",id="Description")
                 .col-md-6    
                   div(class="create-inputs mb-2")  
-                    label(class="form-label",for="productCity") City
-                    input(type="text",class="form-control",id="productCity",placeholder="Enter Porduct City")
+                    label(class="form-label",for="Category") Category
+                    input(type="text",class="form-control",id="Category",placeholder="Enter Category")
+                .col-md-6    
+                  div(class="create-inputs mb-2")  
+                    label(class="form-label",for="subCategory") Sub Category
+                    input(type="text",class="form-control",id="subCategory",placeholder="Enter subCategory")    
                 .col-md-6    
                   div(class="create-inputs mb-2")  
                     label(class="form-label",for="productname") Quantity
