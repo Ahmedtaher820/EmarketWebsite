@@ -15,6 +15,9 @@
       .list {
         flex: 1;
         text-align: right;
+        @include media(mobile) {
+          display: none;
+        }
         i {
           font-size: 14px;
         }
@@ -73,6 +76,9 @@
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
+  @include media(mobile) {
+    width: 100%;
+  }
 }
 .slider .owl-theme .owl-nav.disabled + .owl-dots button span {
   width: 35px;
@@ -122,10 +128,21 @@
   }
   .fashion-box {
     .fashion-list {
+      @include media(mobile) {
+        flex-flow: column;
+      }
       h6 {
         border-bottom: 2px solid $maincolor;
+        @include media(mobile) {
+          margin-bottom: 10px !important;
+          padding-bottom: 5px !important;
+        }
       }
       ul {
+        @include media(mobile) {
+          flex-flow: row wrap;
+          justify-content: center;
+        }
         li {
           display: inline-block !important;
           padding-bottom: 16px !important;
@@ -133,6 +150,16 @@
           &:hover {
             border-bottom: 2px solid $maincolor;
           }
+          &:first-child {
+            @include media(mobile) {
+              margin-left: 10px !important ;
+            }
+          }
+          @include media(mobile) {
+            padding-bottom: 5px !important ;
+          }
+        }
+        @include media(mobile) {
         }
       }
     }
@@ -155,6 +182,10 @@
         }
       }
       .fsh-box {
+        @include media(mobile) {
+          display: flex;
+          flex-direction: column;
+        }
         img {
           width: 160px;
         }
@@ -178,6 +209,26 @@
         }
       }
     }
+  }
+}
+.fashion .owl-carousel .owl-nav button.owl-next,
+.fashion .owl-carousel .owl-nav button.owl-prev,
+.fashion .owl-carousel button.owl-dot {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #333;
+  text-align: center;
+  line-height: 30px;
+  color: $maincolor;
+  border-radius: 50%;
+  transition: 0.3s;
+  span {
+    font-size: 22px;
+  }
+  &:hover {
+    background-color: $maincolor;
+    color: #fff;
+    border-color: $maincolor;
   }
 }
 .iphone {
@@ -231,12 +282,11 @@
             font-size: 14px;
             width: 100%;
             height: 100%;
-            &.wished{
+            &.wished {
               background-color: $maincolor;
               color: #fff;
             }
           }
-
         }
       }
     }
@@ -304,6 +354,9 @@
 .parts {
   .container {
     > ul {
+      @include media(mobile) {
+        flex-flow: row wrap;
+      }
       li {
         position: relative;
         padding: 8px 0px;
@@ -325,6 +378,9 @@
           background-color: #d1d1d1;
           opacity: 0;
           transition: 0.3s;
+          @include media(mobile) {
+            display: none;
+          }
         }
         &:hover {
           &::after {
@@ -339,6 +395,12 @@
         img {
           width: 100px;
           margin: 0px auto;
+          @include media(mobile) {
+            width: 40px;
+          }
+        }
+        @include media(mobile) {
+          width: 25%;
         }
       }
     }
@@ -637,7 +699,7 @@
 }
 // start goup section
 .goup {
-  right:50px;
+  right: 50px;
   top: 60%;
   transform: translateY(-50%);
   display: flex;
@@ -681,19 +743,23 @@
       line-height: 30px;
       margin-right: 0px;
       background-color: rgba(136, 136, 136, 0.507);
-      .fa-plus{
+      .fa-plus {
         display: none;
       }
     }
-    .go-up{
+    .go-up {
       transform: translateX(-30px);
       opacity: 0;
-      transition: .3s;
-      &.active{
+      transition: 0.3s;
+      &.active {
         transform: translateX(0px);
         opacity: 1;
       }
     }
-
+  }
+  @include media(mobile) {
+    right: 5px;
+    bottom: -90px;
+    top: unset;
   }
 }

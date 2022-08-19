@@ -155,34 +155,39 @@ productArray.forEach((e) => {
 });
 // to send product data to DB
 let err = document.querySelector(".error");
-// async function createproduct() {
-//   let userToken = localStorage.getItem("user-market-token");
-//   await fetch(`https://emarket3.herokuapp.com/api/products`, {
-//     method: "POST",
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify({
-//       title: productName.value,
-//       description: description.value,
-//       quantity: quantity.value,
-//       price: price.value,
-//       colors: [color.value],
-//       imageCover: productImg.name,
-//       category: Category.value,
-//       brand: brand.value,
-//       subCategory: [subCategory.value],
-//     }),
-//   })
-//     .then((resolve) => resolve.json())
-//     .then((data) => {
-//       console.log(data);
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// }
+async function createproduct() {
+  let userToken = localStorage.getItem("user-market-token");
+  await fetch(`https://emarket3.herokuapp.com/api/products`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      title: productName.value,
+      description: description.value,
+      quantity: quantity.value,
+      price: price.value,
+      colors: [color.value],
+      imageCover: productImg.name,
+      category: Category.value,
+      brand: brand.value,
+      subCategory: [subCategory.value],
+    }),
+  })
+    .then((resolve) => resolve.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
 function getElement(id) {
   return document.getElementById(id);
 }
+// window.addEventListener("load", () => {
+//   fetch("https://emarket3.herokuapp.com/api/products")
+//     .then((resolve) => resolve.json())
+//     .then((data) => console.log(data));
+// });
